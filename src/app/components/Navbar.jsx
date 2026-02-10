@@ -143,7 +143,7 @@ export default function Navbar() {
         - mx-[-20px]: negative margin to extend width
         - gap-2 sm:gap-6: spacing between flex items
       */}
-      <div className="w-[95%] sm:w-[100%] flex items-center justify-between bg-gray-10/50 backdrop-blur-sm py-5 px-4 sm:px-12 relative mx-[-20px] gap-2 sm:gap-6">
+      <div className="w-[97%] sm:w-[100%] flex items-center justify-between bg-gray-10/50 backdrop-blur-sm py-5 px-4 sm:px-12 relative mx-[-20px] gap-2 sm:gap-6">
         {/* Bottom extended dashed border */}
         <div className="absolute -bottom-[1px] -left-[100px] -right-[100px] border-b-[1.5px] border-dashed border-base-content/40" />
 
@@ -219,9 +219,9 @@ export default function Navbar() {
             className={`
               flex flex-col items-center justify-center
               fixed top-20 left-[5%] w-[90%]
-              bg-base-200 backdrop-blur-sm border border-base-content/30
+              bg-[#e8e2d0] dark:bg-base-200 backdrop-blur-sm border border-base-content/30
               py-2 px-4 gap-2 rounded-lg
-              sm:static sm:flex-row sm:bg-transparent sm:border-none
+              sm:static sm:flex-row sm:bg-transparent dark:sm:bg-transparent sm:border-none
               sm:py-0 sm:px-0 sm:gap-4 sm:rounded-none sm:backdrop-blur-0
               sm:justify-center sm:items-center
               ${hideOnMobile ? "hidden" : "flex"} sm:flex

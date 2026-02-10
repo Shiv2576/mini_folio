@@ -242,7 +242,7 @@ const ExpoLogo = (props) => (
   <svg {...props} preserveAspectRatio="xMidYMid" viewBox="0 0 256 231">
     <path
       d="M121 85c2-3 5-4 7-4 1 0 5 1 7 4 16 22 43 67 63 101l26 40c7 8 18 3 24-6s8-15 8-22c0-4-88-168-97-182-9-13-11-16-26-16h-11c-14 0-16 3-25 16C88 30 0 194 0 198c0 7 2 13 8 22s17 14 24 6l26-40c20-34 47-79 63-101Z"
-      fill="#000020"
+      fill="currentColor" // Changed from hardcoded color
     />
   </svg>
 );
@@ -251,26 +251,32 @@ const SolidityLogo = (props) => (
   <svg {...props} xmlSpace="preserve" viewBox="0 0 1300 1300">
     <path
       d="M773.772 253.308 643.068 485.61H381.842l130.614-232.302h261.316"
+      fill="currentColor" // Added fill
       opacity=".45"
     />
     <path
       d="M643.068 485.61h261.318L773.772 253.308H512.456L643.068 485.61z"
+      fill="currentColor" // Added fill
       opacity=".6"
     />
     <path
       d="M512.456 717.822 643.068 485.61 512.456 253.308 381.842 485.61l130.614 232.212z"
+      fill="currentColor" // Added fill
       opacity=".8"
     />
     <path
       d="m513.721 1066.275 130.704-232.303h261.318l-130.705 232.303H513.721"
+      fill="currentColor" // Added fill
       opacity=".45"
     />
     <path
       d="M644.424 833.973H383.107l130.613 232.303h261.317L644.424 833.973z"
+      fill="currentColor" // Added fill
       opacity=".6"
     />
     <path
       d="M775.038 601.761 644.424 833.973l130.614 232.303 130.704-232.303-130.704-232.212z"
+      fill="currentColor" // Added fill
       opacity=".8"
     />
   </svg>
