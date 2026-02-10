@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+    themes: "light", "dark";
+}
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+    /* Your existing Marquee animation */
+    --animate-marquee: marquee 10s linear infinite;
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    /* Manga Light Palette Variables */
+    --color-manga-dark: #171219;
+    --color-manga-light: #f2fbeb;
+}
+
+:root,
+[data-theme="light"] {
+    --bg-main: #e8e2d0; /* Heavily aged/oxidized paper */
+    --text-main: #0f0f0f; /* Sharp, heavy ink */
+    --b1: 218 210 185; /* Darker parchment for buttons */
+    --bc: 15 15 15;
+}
+
+[data-theme="dark"] {
+    --bg-main: #0d0d0d; /* Near-black */
+    --text-main: #b8b3a3; /* Dim, aged text */
+    --b1: 25 25 25;
+    --bc: 184 179 163;
+}
+
+/* 2. Apply those variables to the body */
+html,
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    font-family: "Rethink Sans";
+
+    /* Use the variables here so they swap automatically */
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
