@@ -148,10 +148,10 @@ export default function Navbar() {
         <div className="absolute -bottom-[1px] -left-[100px] -right-[100px] border-b-[1.5px] border-dashed border-base-content/40" />
 
         {/* Left extended dashed border */}
-        <div className="absolute -left-[1px] -top-[50px] -bottom-[1500px] border-l-[1.5px] border-dashed border-base-content/40" />
+        <div className="absolute -left-[1px] -top-[1500px] -bottom-[1500px] border-l-[1.5px] border-dashed border-base-content/40" />
 
         {/* Right extended dashed border */}
-        <div className="absolute -right-[1px] -top-[50px] -bottom-[1500px] border-r-[1.5px] border-dashed border-base-content/40" />
+        <div className="absolute -right-[1px] -top-[1500px] -bottom-[1500px] border-r-[1.5px] border-dashed border-base-content/40" />
 
         {/*
           Left section: Mobile menu toggle button with morphing hamburger icon
@@ -250,14 +250,6 @@ export default function Navbar() {
                 className="hover:underline font-medium text-base whitespace-nowrap"
               >
                 Experience
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                className="hover:underline font-medium text-base whitespace-nowrap"
-              >
-                Contact
               </Link>
             </li>
             <li>

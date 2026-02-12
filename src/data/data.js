@@ -1,24 +1,124 @@
 import {
-  ReactLogo,
-  MongoDBLogo,
-  NodeJsLogo,
-  NextJsLogo,
-  GoLogo,
-  DockerLogo,
-  ExpoLogo,
-  SolidityLogo,
-  TypeScriptLogo,
-  GitLogo,
-  PostgreSQLLogo,
-} from "../app/components/logo";
+  SiJavascript,
+  SiTailwindcss,
+  SiReact,
+  SiNextdotjs,
+  SiSupabase,
+  SiNuxtdotjs,
+  SiGo,
+  SiExpo,
+  SiDocker,
+  SiBun,
+  SiSocketdotio,
+  SiMongodb,
+  SiApachekafka,
+  SiPostgresql,
+  SiNodedotjs,
+  SiGit,
+  SiSolidity,
+  SiTypescript,
+} from "react-icons/si";
+
+export const skills = [
+  {
+    name: "Js",
+    alt: "js logo",
+    icon: <SiJavascript size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Tailwind",
+    alt: "tailwind logo",
+    icon: <SiTailwindcss size={16} className="text-gray-700" />,
+  },
+  {
+    name: "React Js",
+    alt: "react logo",
+    icon: <SiReact size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Next Js",
+    alt: "nextjs logo",
+    icon: <SiNextdotjs size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Supabase",
+    alt: "supabase logo",
+    icon: <SiSupabase size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Nuxt",
+    alt: "nuxt logo",
+    icon: <SiNuxtdotjs size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Go",
+    alt: "go logo",
+    icon: <SiGo size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Expo",
+    alt: "Expo logo",
+    icon: <SiExpo size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Docker",
+    alt: "docker logo",
+    icon: <SiDocker size={16} className="text-gray-700" />,
+  },
+  {
+    name: "bun",
+    alt: "bun logo",
+    icon: <SiBun size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Socket.IO",
+    alt: "socket.io logo",
+    icon: <SiSocketdotio size={16} className="text-gray-700" />,
+  },
+  {
+    name: "MongoDB",
+    alt: "mongodb logo",
+    icon: <SiMongodb size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Apache Kafka",
+    alt: "apache kafka logo",
+    icon: <SiApachekafka size={16} className="text-gray-700" />,
+  },
+  {
+    name: "PostgreSQL",
+    alt: "postgresql logo",
+    icon: <SiPostgresql size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Node.js",
+    alt: "nodejs logo",
+    icon: <SiNodedotjs size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Git",
+    alt: "git logo",
+    icon: <SiGit size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Solidity",
+    alt: "solidity logo",
+    icon: <SiSolidity size={16} className="text-gray-700" />,
+  },
+  {
+    name: "TypeScript",
+    alt: "typescript logo",
+    icon: <SiTypescript size={16} className="text-gray-700" />,
+  },
+];
 
 export const about = {
   name: "Shivang Dixit",
   role: "Web & Mobile Dev",
   proficient: ["Go", "TypeScript", "React", "PostgreSQL"],
   about:
-    "A minimal, clean portfolio template built with Next.js. Perfect for developers who want a simple yet professional online presence without the complexity.",
-  email: "your.email@example.com",
+    "Working across backend systems in Go, full-stack web development, and iOS app development to create smooth, reliable user experiences.",
+  email: "dixitshiva12358@gmail.com",
 };
 
 export const seo = {
@@ -33,151 +133,390 @@ export const forms = {
   formspreeUrl: "https://formspree.io/f/<url>",
 };
 
-export const skills = [
-  { name: "Html", alt: "html logo", icon: "/html.svg" },
-  { name: "Css", alt: "css logo", icon: "/css.svg" },
-  { name: "Js", alt: "js logo", icon: "/js.svg" },
-  { name: "Tailwind", alt: "tailwind logo", icon: "/tailwind.svg" },
-  { name: "React Js", alt: "react logo", icon: "/react.svg" },
-  { name: "Next Js", alt: "nextjs logo", icon: "/nextjs.svg" },
-];
-
 export const socials = {
-  github: "https://github.com/sachinbhujel",
-  twitter: "https://twitter.com/sachinbhujel909",
-  instagram: "https://www.instagram.com/imsachinbhujel",
-  facebook: "https://www.facebook.com/imsachinbhujel",
+  github: "https://github.com/Shiv2576",
+  twitter: "https://x.com/Shiv_dixit2576",
+  Linkedin: "https://www.linkedin.com/in/shivangdixit2576/",
 };
 
 export const projects = {
   pinProjects: [
     {
-      title: "Modern Portfolio",
+      title: "Weave App",
       description:
         "A sleek, modern portfolio site to showcase your work and skills. Responsive design with smooth navigation and SEO optimization.",
       tags: [
-        { name: "Next.js", logo: <NextJsLogo size={14} /> },
-        { name: "React", logo: <ReactLogo size={14} /> },
-        { name: "TypeScript", logo: <TypeScriptLogo size={14} /> },
-        { name: "PostgreSQL", logo: <PostgreSQLLogo size={14} /> },
+        {
+          name: "Next.js",
+          logo: (
+            <SiNextdotjs
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
+        {
+          name: "React",
+          logo: (
+            <SiReact size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
+        {
+          name: "TypeScript",
+          logo: (
+            <SiTypescript
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
+        {
+          name: "PostgreSQL",
+          logo: (
+            <SiPostgresql
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
       ],
       link: "",
     },
     {
-      title: "Developer Blog Platform",
+      title: "Unistream",
       description:
         "A clean, minimal blog setup featuring dynamic content, category filters, and easy-to-read layouts. Perfect for sharing your ideas.",
       tags: [
-        { name: "React", logo: <ReactLogo size={14} /> },
-        { name: "Node.js", logo: <NodeJsLogo size={14} /> },
-        { name: "MongoDB", logo: <MongoDBLogo size={14} /> },
-        { name: "Docker", logo: <DockerLogo size={14} /> },
+        {
+          name: "React",
+          logo: (
+            <SiReact size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
+        {
+          name: "Node.js",
+          logo: (
+            <SiNodedotjs
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
+        {
+          name: "MongoDB",
+          logo: (
+            <SiMongodb size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
+        {
+          name: "Docker",
+          logo: (
+            <SiDocker size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
       ],
       link: "",
     },
     {
-      title: "E-Commerce Platform",
+      title: "Disperz Web3",
       description:
         "A fast and scalable online store with product listings, cart functionality, and seamless checkout experience. Built for performance.",
       tags: [
-        { name: "Next.js", logo: <NextJsLogo size={14} /> },
-        { name: "Go", logo: <GoLogo size={14} /> },
-        { name: "PostgreSQL", logo: <PostgreSQLLogo size={14} /> },
-        { name: "Docker", logo: <DockerLogo size={14} /> },
+        {
+          name: "Next.js",
+          logo: (
+            <SiNextdotjs
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
+        {
+          name: "Go",
+          logo: <SiGo size={14} className="text-gray-700 dark:text-gray-300" />,
+        },
+        {
+          name: "PostgreSQL",
+          logo: (
+            <SiPostgresql
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
+        {
+          name: "Docker",
+          logo: (
+            <SiDocker size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
       ],
       link: "",
     },
   ],
   otherProjects: [
     {
-      title: "DeFi Dashboard",
+      title: "Market Reaction Signaling Bot Telegram",
       description:
         "Real-time cryptocurrency portfolio tracker with wallet integration and market analytics. Built for Web3 enthusiasts.",
       tags: [
-        { name: "React", logo: <ReactLogo size={14} /> },
-        { name: "Solidity", logo: <SolidityLogo size={14} /> },
-        { name: "TypeScript", logo: <TypeScriptLogo size={14} /> },
+        {
+          name: "React",
+          logo: (
+            <SiReact size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
+        {
+          name: "Solidity",
+          logo: (
+            <SiSolidity
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
+        {
+          name: "TypeScript",
+          logo: (
+            <SiTypescript
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
       ],
       link: "",
     },
     {
-      title: "Mobile Fitness App",
+      title: "Go Absolute",
       description:
         "Cross-platform workout tracker with progress analytics, exercise library, and social features.",
       tags: [
-        { name: "React", logo: <ReactLogo size={14} /> },
-        { name: "Expo", logo: <ExpoLogo size={14} /> },
+        {
+          name: "React",
+          logo: (
+            <SiReact size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
+        {
+          name: "Expo",
+          logo: (
+            <SiExpo size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
       ],
       link: "",
     },
     {
-      title: "DevOps Dashboard",
+      title: "Kafka Eventstreaming",
       description:
         "Centralized dashboard for monitoring server metrics, deployment status, and CI/CD pipelines across multiple projects.",
       tags: [
-        { name: "Go", logo: <GoLogo size={14} /> },
-        { name: "Docker", logo: <DockerLogo size={14} /> },
-        { name: "Git", logo: <GitLogo size={14} /> },
-        { name: "Node.js", logo: <NodeJsLogo size={14} /> },
+        {
+          name: "Go",
+          logo: <SiGo size={14} className="text-gray-700 dark:text-gray-300" />,
+        },
+        {
+          name: "Docker",
+          logo: (
+            <SiDocker size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
+        {
+          name: "Git",
+          logo: (
+            <SiGit size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
+        {
+          name: "Node.js",
+          logo: (
+            <SiNodedotjs
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
       ],
       link: "",
     },
     {
-      title: "AI Content Generator",
+      title: "Solidity Contract",
       description:
         "AI-powered content creation tool with customizable templates, tone adjustment, and bulk generation capabilities.",
       tags: [
-        { name: "Next.js", logo: <NextJsLogo size={14} /> },
-        { name: "Node.js", logo: <NodeJsLogo size={14} /> },
-        { name: "MongoDB", logo: <MongoDBLogo size={14} /> },
-        { name: "PostgreSQL", logo: <PostgreSQLLogo size={14} /> },
+        {
+          name: "Next.js",
+          logo: (
+            <SiNextdotjs
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
+        {
+          name: "Node.js",
+          logo: (
+            <SiNodedotjs
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
+        {
+          name: "MongoDB",
+          logo: (
+            <SiMongodb size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
+        {
+          name: "PostgreSQL",
+          logo: (
+            <SiPostgresql
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
       ],
       link: "",
     },
     {
-      title: "Real-time Chat Application",
+      title: "Svg Animation",
       description:
         "WebSocket-based chat application with room creation, file sharing, and end-to-end encryption.",
       tags: [
-        { name: "React", logo: <ReactLogo size={14} /> },
-        { name: "Node.js", logo: <NodeJsLogo size={14} /> },
-        { name: "MongoDB", logo: <MongoDBLogo size={14} /> },
+        {
+          name: "React",
+          logo: (
+            <SiReact size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
+        {
+          name: "Node.js",
+          logo: (
+            <SiNodedotjs
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
+        {
+          name: "MongoDB",
+          logo: (
+            <SiMongodb size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
       ],
       link: "",
     },
     {
-      title: "Microservices Architecture",
+      title: "Go websocket",
       description:
         "Scalable microservices architecture with service discovery, API gateway, and distributed tracing.",
       tags: [
-        { name: "Go", logo: <GoLogo size={14} /> },
-        { name: "Docker", logo: <DockerLogo size={14} /> },
-        { name: "Node.js", logo: <NodeJsLogo size={14} /> },
-        { name: "PostgreSQL", logo: <PostgreSQLLogo size={14} /> },
+        {
+          name: "Go",
+          logo: <SiGo size={14} className="text-gray-700 dark:text-gray-300" />,
+        },
+        {
+          name: "Docker",
+          logo: (
+            <SiDocker size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
+        {
+          name: "Node.js",
+          logo: (
+            <SiNodedotjs
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
+        {
+          name: "PostgreSQL",
+          logo: (
+            <SiPostgresql
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
       ],
       link: "",
     },
     {
-      title: "API Gateway Service",
+      title: "Minimalist Portfolio Template",
       description:
         "High-performance API gateway with rate limiting, authentication, and request routing for microservices.",
       tags: [
-        { name: "Go", logo: <GoLogo size={14} /> },
-        { name: "TypeScript", logo: <TypeScriptLogo size={14} /> },
-        { name: "Docker", logo: <DockerLogo size={14} /> },
-        { name: "PostgreSQL", logo: <PostgreSQLLogo size={14} /> },
+        {
+          name: "Go",
+          logo: <SiGo size={14} className="text-gray-700 dark:text-gray-300" />,
+        },
+        {
+          name: "TypeScript",
+          logo: (
+            <SiTypescript
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
+        {
+          name: "Docker",
+          logo: (
+            <SiDocker size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
+        {
+          name: "PostgreSQL",
+          logo: (
+            <SiPostgresql
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
       ],
       link: "",
     },
     {
-      title: "Code Collaboration Tool",
+      title: "Swift Practice",
       description:
         "Real-time code editor with collaborative features, syntax highlighting, and version control integration.",
       tags: [
-        { name: "React", logo: <ReactLogo size={14} /> },
-        { name: "TypeScript", logo: <TypeScriptLogo size={14} /> },
-        { name: "Node.js", logo: <NodeJsLogo size={14} /> },
-        { name: "Git", logo: <GitLogo size={14} /> },
+        {
+          name: "React",
+          logo: (
+            <SiReact size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
+        {
+          name: "TypeScript",
+          logo: (
+            <SiTypescript
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
+        {
+          name: "Node.js",
+          logo: (
+            <SiNodedotjs
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
+        {
+          name: "Git",
+          logo: (
+            <SiGit size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
       ],
       link: "",
     },

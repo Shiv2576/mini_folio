@@ -6,7 +6,7 @@ import { seo } from "../data/data";
 export const metadata = {
   title: `${seo.title}`,
   icons: {
-    icon: [{ url: "/favicon.ico" }],
+    icon: [{ url: "/favicon.png" }],
   },
   description: `${seo.description}`,
   keywords: `${seo.keywords}`,

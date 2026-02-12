@@ -65,9 +65,8 @@ export default function Profile() {
       {/* Social Links */}
       <div className="flex items-center mt-5 gap-4">
         {[
-          { link: socials.instagram, icon: "instagram", label: "Instagram" },
+          { link: socials.Linkedin, icon: "linkedin", label: "LinkedIn" },
           { link: socials.github, icon: "github", label: "GitHub" },
-          { link: socials.facebook, icon: "facebook", label: "Facebook" },
           { link: socials.twitter, icon: "twitter", label: "Twitter" },
         ].map((item, index) => (
           <a
@@ -130,6 +129,14 @@ function SocialIcon({ type, title }) {
     case "twitter":
       return wrapIcon(
         <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />,
+      );
+    case "linkedin":
+      return wrapIcon(
+        <>
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+          <rect width="4" height="12" x="2" y="9" />
+          <circle cx="4" cy="4" r="2" />
+        </>,
       );
     default:
       return null;

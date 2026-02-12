@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { projects, seo } from "../../data/data";
+import { projects } from "../../data/data";
 import { useRouter } from "next/navigation";
 
 export default function Projects() {
