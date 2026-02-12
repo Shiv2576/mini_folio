@@ -17,11 +17,28 @@ import {
   SiGit,
   SiSolidity,
   SiTypescript,
+  SiShadcnui,
+  SiFoundryvirtualtabletop,
+  SiCloudfoundry,
+  SiEthereum,
+  SiTelegram,
+  SiBitcoin,
+  SiWeb3Dotjs,
+  SiVercel,
+  SiBlockchaindotcom,
+  SiSwift,
+  SiPython,
+  SiJupyter,
+  SiClaude,
+  SiGin,
+  SiDrizzle,
+  SiVite,
+  SiLazyvim,
 } from "react-icons/si";
 
 export const skills = [
   {
-    name: "Js",
+    name: "JavaScript",
     alt: "js logo",
     icon: <SiJavascript size={16} className="text-gray-700" />,
   },
@@ -110,6 +127,46 @@ export const skills = [
     alt: "typescript logo",
     icon: <SiTypescript size={16} className="text-gray-700" />,
   },
+  {
+    name: "Python",
+    alt: "Python logo",
+    icon: <SiPython size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Jupyter",
+    alt: "Jupyter logo",
+    icon: <SiJupyter size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Claude",
+    alt: "Claude logo",
+    icon: <SiClaude size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Gin",
+    alt: "Gin logo",
+    icon: <SiGin size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Drizzle",
+    alt: "Drizzle logo",
+    icon: <SiDrizzle size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Vite",
+    alt: "Vite logo",
+    icon: <SiVite size={16} className="text-gray-700" />,
+  },
+  {
+    name: "LazyVim",
+    alt: "LazyVim logo",
+    icon: <SiLazyvim size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Shadcn",
+    alt: "Shadcn logo",
+    icon: <SiShadcnui size={16} className="text-gray-700" />,
+  },
 ];
 
 export const about = {
@@ -144,21 +201,18 @@ export const projects = {
     {
       title: "Weave App",
       description:
-        "A sleek, modern portfolio site to showcase your work and skills. Responsive design with smooth navigation and SEO optimization.",
+        "This App is used to covert jpeg to pdfs with offline functionality, local storage and sharable , Seamlessley ui . With this project i learned app version and project structure.",
       tags: [
-        {
-          name: "Next.js",
-          logo: (
-            <SiNextdotjs
-              size={14}
-              className="text-gray-700 dark:text-gray-300"
-            />
-          ),
-        },
         {
           name: "React",
           logo: (
             <SiReact size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
+        {
+          name: "Expo",
+          logo: (
+            <SiExpo size={14} className="text-gray-700 dark:text-gray-300" />
           ),
         },
         {
@@ -170,22 +224,13 @@ export const projects = {
             />
           ),
         },
-        {
-          name: "PostgreSQL",
-          logo: (
-            <SiPostgresql
-              size={14}
-              className="text-gray-700 dark:text-gray-300"
-            />
-          ),
-        },
       ],
       link: "",
     },
     {
       title: "Unistream",
       description:
-        "A clean, minimal blog setup featuring dynamic content, category filters, and easy-to-read layouts. Perfect for sharing your ideas.",
+        "A stream service of TWAP / SPOT prices liquidity of pools in Uniswap V3 , with slippage calculation and order book visualization , with different time frames from 15mins to 2hrs.",
       tags: [
         {
           name: "React",
@@ -193,35 +238,6 @@ export const projects = {
             <SiReact size={14} className="text-gray-700 dark:text-gray-300" />
           ),
         },
-        {
-          name: "Node.js",
-          logo: (
-            <SiNodedotjs
-              size={14}
-              className="text-gray-700 dark:text-gray-300"
-            />
-          ),
-        },
-        {
-          name: "MongoDB",
-          logo: (
-            <SiMongodb size={14} className="text-gray-700 dark:text-gray-300" />
-          ),
-        },
-        {
-          name: "Docker",
-          logo: (
-            <SiDocker size={14} className="text-gray-700 dark:text-gray-300" />
-          ),
-        },
-      ],
-      link: "",
-    },
-    {
-      title: "Disperz Web3",
-      description:
-        "A fast and scalable online store with product listings, cart functionality, and seamless checkout experience. Built for performance.",
-      tags: [
         {
           name: "Next.js",
           logo: (
@@ -236,9 +252,50 @@ export const projects = {
           logo: <SiGo size={14} className="text-gray-700 dark:text-gray-300" />,
         },
         {
-          name: "PostgreSQL",
+          name: "Docker",
           logo: (
-            <SiPostgresql
+            <SiDocker size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
+        {
+          name: "Shadcnui",
+          logo: (
+            <SiShadcnui
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
+      ],
+      link: "",
+    },
+    {
+      title: "Disperz Web3",
+      description:
+        "Multi-Token transfers on sepolia testnet to multiple wallets with a user-friendly interface and personlized vault.",
+      tags: [
+        {
+          name: "Next.js",
+          logo: (
+            <SiNextdotjs
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
+        {
+          name: "Solidity",
+          logo: (
+            <SiSolidity
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
+        {
+          name: "Shadcnui",
+          logo: (
+            <SiShadcnui
               size={14}
               className="text-gray-700 dark:text-gray-300"
             />
@@ -250,6 +307,15 @@ export const projects = {
             <SiDocker size={14} className="text-gray-700 dark:text-gray-300" />
           ),
         },
+        {
+          name: "Ethereum",
+          logo: (
+            <SiEthereum
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
+          ),
+        },
       ],
       link: "",
     },
@@ -258,18 +324,21 @@ export const projects = {
     {
       title: "Market Reaction Signaling Bot Telegram",
       description:
-        "Real-time cryptocurrency portfolio tracker with wallet integration and market analytics. Built for Web3 enthusiasts.",
+        "Market Reaction Signaling Bot Telegram , scrapes whale transactions buy and sell signals on memspace and sends signals through telegram bot.",
       tags: [
         {
-          name: "React",
+          name: "Nuxt.js",
           logo: (
-            <SiReact size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiNuxtdotjs
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
           ),
         },
         {
-          name: "Solidity",
+          name: "Telegram",
           logo: (
-            <SiSolidity
+            <SiTelegram
               size={14}
               className="text-gray-700 dark:text-gray-300"
             />
@@ -284,24 +353,37 @@ export const projects = {
             />
           ),
         },
+        {
+          name: "Bitcoin",
+          logo: (
+            <SiBitcoin size={14} className="text-gray-700 dark:text-gray-300" />
+          ),
+        },
       ],
       link: "",
     },
     {
       title: "Go Absolute",
       description:
-        "Cross-platform workout tracker with progress analytics, exercise library, and social features.",
+        "Your journey to mastering backend development with Golang. Follow this structured timeline from fundamentals to advanced systems.",
       tags: [
         {
-          name: "React",
+          name: "Nuxt.js",
           logo: (
-            <SiReact size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiNuxtdotjs
+              size={14}
+              className="text-gray-700 dark:text-gray-300"
+            />
           ),
         },
         {
-          name: "Expo",
+          name: "Go",
+          logo: <SiGo size={14} className="text-gray-700 dark:text-gray-300" />,
+        },
+        {
+          name: "Git",
           logo: (
-            <SiExpo size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiGit size={14} className="text-gray-700 dark:text-gray-300" />
           ),
         },
       ],
@@ -309,8 +391,7 @@ export const projects = {
     },
     {
       title: "Kafka Eventstreaming",
-      description:
-        "Centralized dashboard for monitoring server metrics, deployment status, and CI/CD pipelines across multiple projects.",
+      description: "",
       tags: [
         {
           name: "Go",
@@ -328,51 +409,35 @@ export const projects = {
             <SiGit size={14} className="text-gray-700 dark:text-gray-300" />
           ),
         },
-        {
-          name: "Node.js",
-          logo: (
-            <SiNodedotjs
-              size={14}
-              className="text-gray-700 dark:text-gray-300"
-            />
-          ),
-        },
       ],
       link: "",
     },
     {
       title: "Solidity Contract",
-      description:
-        "AI-powered content creation tool with customizable templates, tone adjustment, and bulk generation capabilities.",
+      description: "Disperz solidity contract made and test in Foundry(Rust).",
       tags: [
         {
-          name: "Next.js",
+          name: "Solidity",
           logo: (
-            <SiNextdotjs
+            <SiSolidity
               size={14}
               className="text-gray-700 dark:text-gray-300"
             />
           ),
         },
         {
-          name: "Node.js",
+          name: "Web3.js",
           logo: (
-            <SiNodedotjs
+            <SiWeb3Dotjs
               size={14}
               className="text-gray-700 dark:text-gray-300"
             />
           ),
         },
         {
-          name: "MongoDB",
+          name: "Ethereum",
           logo: (
-            <SiMongodb size={14} className="text-gray-700 dark:text-gray-300" />
-          ),
-        },
-        {
-          name: "PostgreSQL",
-          logo: (
-            <SiPostgresql
+            <SiEthereum
               size={14}
               className="text-gray-700 dark:text-gray-300"
             />
@@ -384,7 +449,7 @@ export const projects = {
     {
       title: "Svg Animation",
       description:
-        "WebSocket-based chat application with room creation, file sharing, and end-to-end encryption.",
+        "Just me experimenting with svg Images & Animations with free resources.",
       tags: [
         {
           name: "React",
@@ -393,18 +458,18 @@ export const projects = {
           ),
         },
         {
-          name: "Node.js",
+          name: "TypeScript",
           logo: (
-            <SiNodedotjs
+            <SiTypescript
               size={14}
               className="text-gray-700 dark:text-gray-300"
             />
           ),
         },
         {
-          name: "MongoDB",
+          name: "Vercel",
           logo: (
-            <SiMongodb size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiVercel size={14} className="text-gray-700 dark:text-gray-300" />
           ),
         },
       ],
@@ -413,7 +478,7 @@ export const projects = {
     {
       title: "Go websocket",
       description:
-        "Scalable microservices architecture with service discovery, API gateway, and distributed tracing.",
+        "TWAP Oracle is a Go-based WebSocket service that streams both spot prices and time-weighted average prices (TWAP) for the USDC/WETH pair on Uniswap.",
       tags: [
         {
           name: "Go",
@@ -426,18 +491,9 @@ export const projects = {
           ),
         },
         {
-          name: "Node.js",
+          name: "Blockchain",
           logo: (
-            <SiNodedotjs
-              size={14}
-              className="text-gray-700 dark:text-gray-300"
-            />
-          ),
-        },
-        {
-          name: "PostgreSQL",
-          logo: (
-            <SiPostgresql
+            <SiBlockchaindotcom
               size={14}
               className="text-gray-700 dark:text-gray-300"
             />
@@ -449,31 +505,27 @@ export const projects = {
     {
       title: "Minimalist Portfolio Template",
       description:
-        "High-performance API gateway with rate limiting, authentication, and request routing for microservices.",
+        "Template for creating a minimalist portfolio website with React, Tailwind CSS, and JavaScript.",
       tags: [
         {
-          name: "Go",
-          logo: <SiGo size={14} className="text-gray-700 dark:text-gray-300" />,
-        },
-        {
-          name: "TypeScript",
+          name: "Javascript",
           logo: (
-            <SiTypescript
+            <SiJavascript
               size={14}
               className="text-gray-700 dark:text-gray-300"
             />
           ),
         },
         {
-          name: "Docker",
+          name: "React",
           logo: (
-            <SiDocker size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiReact size={14} className="text-gray-700 dark:text-gray-300" />
           ),
         },
         {
-          name: "PostgreSQL",
+          name: "Tailwind",
           logo: (
-            <SiPostgresql
+            <SiTailwindcss
               size={14}
               className="text-gray-700 dark:text-gray-300"
             />
@@ -485,30 +537,12 @@ export const projects = {
     {
       title: "Swift Practice",
       description:
-        "Real-time code editor with collaborative features, syntax highlighting, and version control integration.",
+        "Practice Swift programming skills by building small projects and solving coding challenges.",
       tags: [
         {
-          name: "React",
+          name: "Swift",
           logo: (
-            <SiReact size={14} className="text-gray-700 dark:text-gray-300" />
-          ),
-        },
-        {
-          name: "TypeScript",
-          logo: (
-            <SiTypescript
-              size={14}
-              className="text-gray-700 dark:text-gray-300"
-            />
-          ),
-        },
-        {
-          name: "Node.js",
-          logo: (
-            <SiNodedotjs
-              size={14}
-              className="text-gray-700 dark:text-gray-300"
-            />
+            <SiSwift size={14} className="text-gray-700 dark:text-gray-300" />
           ),
         },
         {
