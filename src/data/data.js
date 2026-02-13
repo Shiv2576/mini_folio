@@ -201,7 +201,7 @@ export const projects = {
     {
       title: "Weave App",
       description:
-        "This App is used to covert jpeg to pdfs with offline functionality, local storage and sharable , Seamlessley ui . With this project i learned app version and project structure.",
+        "A clean, offline-first app that converts JPEGs to PDFs right in your browser. No servers, no uploads—just seamless file conversion with local storage and easy sharing. Built this to really understand app versioning and project architecture.",
       tags: [
         {
           name: "React",
@@ -230,7 +230,7 @@ export const projects = {
     {
       title: "Unistream",
       description:
-        "A stream service of TWAP / SPOT prices liquidity of pools in Uniswap V3 , with slippage calculation and order book visualization , with different time frames from 15mins to 2hrs.",
+        "Real-time streaming service for Uniswap V3 liquidity data. Visualizes TWAP/SPOT prices with an interactive order book and slippage calculator. Choose your timeframe from 15 minutes to 2 hours and watch the market move.",
       tags: [
         {
           name: "React",
@@ -272,7 +272,7 @@ export const projects = {
     {
       title: "Disperz Web3",
       description:
-        "Multi-Token transfers on sepolia testnet to multiple wallets with a user-friendly interface and personlized vault.",
+        "Batch send multiple tokens to different wallets on Sepolia testnet in one go. Clean interface, personal vaults, and no more tedious one-by-one transfers. Smart contract tested and ready.",
       tags: [
         {
           name: "Next.js",
@@ -324,7 +324,7 @@ export const projects = {
     {
       title: "Market Reaction Signaling Bot Telegram",
       description:
-        "Market Reaction Signaling Bot Telegram , scrapes whale transactions buy and sell signals on memspace and sends signals through telegram bot.",
+        "Telegram bot that watches the mempool like a hawk. Scrapes whale transactions and sends instant alerts when big players move. Never miss a signal again.",
       tags: [
         {
           name: "Nuxt.js",
@@ -365,7 +365,7 @@ export const projects = {
     {
       title: "Go Absolute",
       description:
-        "Your journey to mastering backend development with Golang. Follow this structured timeline from fundamentals to advanced systems.",
+        "A curated learning path for Go backend development. From 'hello world' to building systems that actually scale. Perfect for devs who want to get their hands dirty with real-world Go.",
       tags: [
         {
           name: "Nuxt.js",
@@ -391,7 +391,8 @@ export const projects = {
     },
     {
       title: "Kafka Eventstreaming",
-      description: "",
+      description:
+        "Building event-driven systems with Go and Kafka. Because sometimes you need your services to actually talk to each other.",
       tags: [
         {
           name: "Go",
@@ -414,7 +415,8 @@ export const projects = {
     },
     {
       title: "Solidity Contract",
-      description: "Disperz solidity contract made and test in Foundry(Rust).",
+      description:
+        "The brains behind Disperz—smart contracts built in Solidity and battle-tested with Foundry. Because DeFi should just work.",
       tags: [
         {
           name: "Solidity",
@@ -449,7 +451,7 @@ export const projects = {
     {
       title: "Svg Animation",
       description:
-        "Just me experimenting with svg Images & Animations with free resources.",
+        "Got bored, started playing with SVGs. Turns out you can make some pretty cool stuff with just code and creativity. No AI, just pure CSS/JS magic.",
       tags: [
         {
           name: "React",
@@ -478,7 +480,7 @@ export const projects = {
     {
       title: "Go websocket",
       description:
-        "TWAP Oracle is a Go-based WebSocket service that streams both spot prices and time-weighted average prices (TWAP) for the USDC/WETH pair on Uniswap.",
+        "Real-time price oracle streaming both spot and TWAP prices for USDC/WETH on Uniswap. Because sometimes you need your data fresh, not 5 minutes old.",
       tags: [
         {
           name: "Go",
@@ -505,7 +507,7 @@ export const projects = {
     {
       title: "Minimalist Portfolio Template",
       description:
-        "Template for creating a minimalist portfolio website with React, Tailwind CSS, and JavaScript.",
+        "A no-fuss portfolio template for devs who believe less is more. Built with React, Tailwind—fork it and make it yours in minutes.",
       tags: [
         {
           name: "Javascript",
@@ -537,7 +539,7 @@ export const projects = {
     {
       title: "Swift Practice",
       description:
-        "Practice Swift programming skills by building small projects and solving coding challenges.",
+        "My journey into iOS development—one small project and coding challenge at a time. Learning Swift by actually building stuff.",
       tags: [
         {
           name: "Swift",
