@@ -201,7 +201,7 @@ export const projects = {
     {
       title: "Weave App",
       description:
-        "A clean, offline-first app that converts JPEGs to PDFs right in your browser. No servers, no uploads—just seamless file conversion with local storage and easy sharing. Built this to really understand app versioning and project architecture.",
+        "A clean, offline-first app that converts JPEGs to PDFs right in your mobile. No servers, no uploads—just seamless file conversion with local storage and easy sharing. Built this to really understand app versioning and project architecture.",
       tags: [
         {
           name: "React",
@@ -225,7 +225,7 @@ export const projects = {
           ),
         },
       ],
-      link: "",
+      link: "https://weavemobile.netlify.app/",
     },
     {
       title: "Unistream",
@@ -267,7 +267,7 @@ export const projects = {
           ),
         },
       ],
-      link: "",
+      link: "https://unistream2.netlify.app/",
     },
     {
       title: "Disperz Web3",
@@ -317,7 +317,7 @@ export const projects = {
           ),
         },
       ],
-      link: "",
+      link: "https://disperz.netlify.app/",
     },
   ],
   otherProjects: [
@@ -360,7 +360,7 @@ export const projects = {
           ),
         },
       ],
-      link: "",
+      link: "https://mrt-nu.vercel.app/",
     },
     {
       title: "Go Absolute",
@@ -387,7 +387,7 @@ export const projects = {
           ),
         },
       ],
-      link: "",
+      link: "https://goabsolute.netlify.app/",
     },
     {
       title: "Kafka Eventstreaming",
@@ -411,7 +411,7 @@ export const projects = {
           ),
         },
       ],
-      link: "",
+      link: "https://github.com/Shiv2576/Go-Kafka-Learning-Documentation-Roadmap",
     },
     {
       title: "Solidity Contract",
@@ -446,7 +446,7 @@ export const projects = {
           ),
         },
       ],
-      link: "",
+      link: "https://github.com/Shiv2576/Disperz",
     },
     {
       title: "Svg Animation",
@@ -475,7 +475,7 @@ export const projects = {
           ),
         },
       ],
-      link: "",
+      link: "https://logbook-delta-red.vercel.app/",
     },
     {
       title: "Go websocket",
@@ -502,7 +502,7 @@ export const projects = {
           ),
         },
       ],
-      link: "",
+      link: "https://github.com/Shiv2576/Twap_Oracle-Uniswap-",
     },
     {
       title: "Minimalist Portfolio Template",
@@ -534,7 +534,7 @@ export const projects = {
           ),
         },
       ],
-      link: "",
+      link: "https://github.com/Shiv2576/mini_folio",
     },
     {
       title: "Swift Practice",
@@ -554,7 +554,7 @@ export const projects = {
           ),
         },
       ],
-      link: "",
+      link: "https://github.com/Shiv2576/swift_practice",
     },
   ],
 };
