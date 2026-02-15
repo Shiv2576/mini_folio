@@ -561,39 +561,40 @@ export const projects = {
 
 export const experience = [
   {
-    title: "Frontend Developer at Tech Solutions",
+    title: "Weave – Offline Image to PDF App",
     description:
-      "Worked on building and maintaining responsive web applications using React.js and Next.js, improving UI performance and user experience.",
-    date: "15/01/2024",
+      "Developing an ad-free offline image-to-PDF mobile application using Expo and React Native, focused on privacy and in-app storage.",
+    date: "Current",
   },
   {
-    title: "Web Developer Intern at Creative Studio",
+    title: "TON Mini App Builder",
     description:
-      "Assisted in designing website layouts, wrote clean HTML/CSS code, and collaborated with the team on JavaScript features for client projects.",
-    date: "10/06/2023",
+      "Built Telegram Mini Apps using the Telegram WebApp SDK and integrated them with the TON blockchain for on-chain interactions.",
+    date: "15/01/2025",
   },
   {
-    title: "Junior Developer at Innovate Labs",
+    title: "University Mobile App Feature Development",
     description:
-      "Developed and tested frontend components, optimized web pages for speed, and contributed to team code reviews and debugging sessions.",
+      "Developed a responsive file upload feature for the university’s official mobile app using React Native, supporting multiple file formats.",
+    date: "01/07/2025",
+  },
+  {
+    title: "Chainlink Oracle Integrations",
+    description:
+      "Developed and deployed automated Solidity smart contracts using Chainlink log triggers and VRF on Ethereum.",
     date: "01/09/2022",
   },
 ];
 
 export const blogs = [
   {
-    title: "Understanding React Hooks",
+    title: "Common Go Mistakes",
     date: "12/03/2025",
-    link: "#",
+    link: "https://100go.co/",
   },
   {
-    title: "CSS Grid vs Flexbox: When to Use Which",
+    title: "Diving into Apple's CryptoKit & Foundation",
     date: "25/12/2024",
-    link: "#",
-  },
-  {
-    title: "Next.js SEO Best Practices",
-    date: "10/07/2024",
-    link: "#",
+    link: "https://developer.apple.com/documentation/cryptokit",
   },
 ];
