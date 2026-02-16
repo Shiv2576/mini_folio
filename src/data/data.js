@@ -194,6 +194,7 @@ export const socials = {
   github: "https://github.com/Shiv2576",
   twitter: "https://x.com/Shiv_dixit2576",
   Linkedin: "https://www.linkedin.com/in/shivangdixit2576/",
+  Resume: "",
 };
 
 export const projects = {
@@ -567,22 +568,22 @@ export const experience = [
     date: "Current",
   },
   {
-    title: "TON Mini App Builder",
-    description:
-      "Built Telegram Mini Apps using the Telegram WebApp SDK and integrated them with the TON blockchain for on-chain interactions.",
-    date: "15/01/2025",
-  },
-  {
     title: "University Mobile App Feature Development",
     description:
       "Developed a responsive file upload feature for the university’s official mobile app using React Native, supporting multiple file formats.",
-    date: "01/07/2025",
+    date: "01/11/2025",
+  },
+  {
+    title: "TON Mini App Builder",
+    description:
+      "Built Telegram Mini Apps using the Telegram WebApp SDK and integrated them with the TON blockchain for on-chain interactions.",
+    date: "",
   },
   {
     title: "Chainlink Oracle Integrations",
     description:
       "Developed and deployed automated Solidity smart contracts using Chainlink log triggers and VRF on Ethereum.",
-    date: "01/09/2022",
+    date: "01/07/2024",
   },
 ];
 

@@ -1,21 +1,56 @@
 "use client";
 
-import { useCallback } from "react";
+import { useCallback, useState, useEffect } from "react"; // Added useState, useEffect
 import { socials, about } from "../../data/data";
 import Pixelate from "./pixelate";
 import Image from "next/image";
 
 export default function Profile() {
-  // Callback ref: React calls this function with the DOM element as soon as it mounts
   const profileRef = useCallback((node) => {
     if (node !== null) {
-      // Initialize the pixelate effect
       new Pixelate(node, {
         images: ["/profile1.jpg", "/profile2.jpg"],
         timeBetweenSteps: 80,
       });
     }
   }, []);
+
+  // ========== ADDED: Time Zone State and Effect ==========
+  const [currentTime, setCurrentTime] = useState({
+    ist: "",
+    gmt: "",
+  });
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+
+      // IST Format
+      const istOptions = {
+        timeZone: "Asia/Kolkata",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true,
+      };
+
+      setCurrentTime({
+        ist: now.toLocaleTimeString("en-IN", istOptions),
+        gmt: `GMT+5:30 (${now.toLocaleTimeString("en-IN", {
+          timeZone: "Asia/Kolkata",
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+        })} UTC)`,
+      });
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+  // ========== END OF ADDED CODE ==========
 
   return (
     <div className="flex flex-col items-start">
@@ -33,23 +68,104 @@ export default function Profile() {
         />
       </div>
 
-      {/* Name and Verified Icon */}
-      <div className="flex gap-2 items-center mt-4">
-        <h1 className="text-3xl font-black tracking-tight text-manga-dark dark:text-manga-light uppercase">
-          {about.name}
-        </h1>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="24px"
-          viewBox="0 -960 960 960"
-          width="24px"
-          className="fill-manga-dark dark:fill-manga-light"
-          aria-hidden="false"
-          role="img"
-        >
-          <title>Verified Account</title>
-          <path d="m344-60-76-128-144-32 14-148-98-112 98-112-14-148 144-32 76-128 136 58 136-58 76 128 144 32-14 148 98 112-98 112 14 148-144 32-76 128-136-58-136 58Zm94-278 226-226-56-58-170 170-86-84-56 56 142 142Z" />
-        </svg>
+      {/* ========== MODIFIED: Time Zone Section - MOVED UP ========== */}
+      {/* Time Zone Display - Positioned right after profile image */}
+      <div className="w-full -mt-25 mb-1">
+        {" "}
+        {/* Reduced margin and added container */}
+        <div className="ml-auto flex flex-col items-end gap-2">
+          {" "}
+          {/* Stacked layout */}
+          {/* IST Display */}
+          <div className="flex items-center gap-1.5 px-3 py-1 bg-manga-dark/5 dark:bg-manga-light/10 rounded-md border border-manga-dark/20 dark:border-manga-light/20">
+            {/* India Flag Emoji or Icon */}
+            <span className="text-base" role="img" aria-label="India">
+              🇮🇳
+            </span>
+
+            {/* IST Label */}
+            <span className="text-xs font-bold text-manga-dark dark:text-manga-light opacity-70">
+              IST
+            </span>
+
+            {/* Time Display */}
+            <span className="text-sm font-mono font-medium text-manga-dark dark:text-manga-light">
+              {currentTime.ist || "Loading..."}
+            </span>
+          </div>
+          {/* GMT Display */}
+          <div className="flex items-center gap-1.5 px-3 py-1 bg-manga-dark/5 dark:bg-manga-light/10 rounded-md border border-manga-dark/20 dark:border-manga-light/20">
+            {/* Globe Icon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-manga-dark dark:text-manga-light opacity-70"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+
+            {/* GMT Label */}
+            <span className="text-xs font-bold text-manga-dark dark:text-manga-light opacity-70">
+              GMT
+            </span>
+
+            {/* GMT Offset */}
+            <span className="text-xs font-mono font-medium text-manga-dark dark:text-manga-light">
+              +5:30
+            </span>
+
+            {/* UTC Time */}
+            <span className="text-xs text-manga-dark dark:text-manga-light opacity-60">
+              (
+              {new Date().toLocaleTimeString("en-IN", {
+                timeZone: "Asia/Kolkata",
+                hour: "2-digit",
+                minute: "2-digit",
+                hour12: false,
+                timeZoneName: "short",
+              })}{" "}
+              UTC)
+            </span>
+          </div>
+          {/* INDIA Badge - Separated for emphasis */}
+          <div className="flex items-center gap-1">
+            <span className="text-xs px-2 py-0.5 bg-manga-dark dark:bg-manga-light text-manga-light dark:text-manga-dark rounded font-bold">
+              INDIA
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Name and Verified Icon - NOW BELOW TIME ZONE */}
+      <div className="flex gap-2 items-center mt-7 w-full">
+        <div className="flex gap-2 items-center">
+          {" "}
+          {/* Left side with name and verified */}
+          <h1 className="text-3xl font-black tracking-tight text-manga-dark dark:text-manga-light uppercase">
+            {about.name}
+          </h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            width="24px" // Added explicit width
+            viewBox="0 -960 960 960" // Kept original viewBox
+            className="fill-manga-dark dark:fill-manga-light"
+            aria-hidden="false"
+            role="img"
+          >
+            <title>Verified Account</title>
+            <path d="m344-60-76-128-144-32 14-148-98-112 98-112-14-148 144-32 76-128 136 58 136-58 76 128 144 32-14 148 98 112-98 112 14 148-144 32-76 128-136-58-136 58Zm94-278 226-226-56-58-170 170-86-84-56 56 142 142Z" />
+          </svg>
+        </div>
       </div>
 
       {/* Role and Solo Status */}
@@ -68,6 +184,7 @@ export default function Profile() {
           { link: socials.Linkedin, icon: "linkedin", label: "LinkedIn" },
           { link: socials.github, icon: "github", label: "GitHub" },
           { link: socials.twitter, icon: "twitter", label: "Twitter" },
+          { link: socials.Resume, icon: "resume", label: "Resume" },
         ].map((item, index) => (
           <a
             key={index}
@@ -136,6 +253,16 @@ function SocialIcon({ type, title }) {
           <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
           <rect width="4" height="12" x="2" y="9" />
           <circle cx="4" cy="4" r="2" />
+        </>,
+      );
+    case "resume":
+      return wrapIcon(
+        <>
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" />
+          <path d="M14 2v6h6" />
+          <path d="M16 13H8" />
+          <path d="M16 17H8" />
+          <path d="M10 9H8" />
         </>,
       );
     default:
