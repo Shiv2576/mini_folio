@@ -34,6 +34,16 @@ import {
   SiDrizzle,
   SiVite,
   SiLazyvim,
+  SiGraphql,
+  SiRedbull,
+  SiZig,
+  SiNeovim,
+  SiLua,
+  SiGithub,
+  SiRust,
+  SiRadixui,
+  SiMdx,
+  SiTypst,
 } from "react-icons/si";
 
 export const skills = [
@@ -166,6 +176,51 @@ export const skills = [
     name: "Shadcn",
     alt: "Shadcn logo",
     icon: <SiShadcnui size={16} className="text-gray-700" />,
+  },
+  {
+    name: "GraphQL",
+    alt: "GraphQL logo",
+    icon: <SiGraphql size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Neovim",
+    alt: "Neovim logo",
+    icon: <SiNeovim size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Swift",
+    alt: "Swift logo",
+    icon: <SiSwift size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Lua",
+    alt: "Lua logo",
+    icon: <SiLua size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Github",
+    alt: "Github logo",
+    icon: <SiGithub size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Rust",
+    alt: "Rust logo",
+    icon: <SiRust size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Radix ui",
+    alt: "Radixui logo",
+    icon: <SiRadixui size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Mdx",
+    alt: "Mdx logo",
+    icon: <SiMdx size={16} className="text-gray-700" />,
+  },
+  {
+    name: "Typst",
+    alt: "Typst logo",
+    icon: <SiTypst size={16} className="text-gray-700" />,
   },
 ];
 
