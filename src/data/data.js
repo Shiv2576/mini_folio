@@ -249,7 +249,8 @@ export const socials = {
   github: "https://github.com/Shiv2576",
   twitter: "https://x.com/Shiv_dixit2576",
   Linkedin: "https://www.linkedin.com/in/shivangdixit2576/",
-  Resume: "",
+  Resume:
+    "https://drive.google.com/file/d/1ie08zhFwNcF76NsRTqWJT_tlOlwyOTZc/view?usp=drive_link",
 };
 
 export const projects = {
