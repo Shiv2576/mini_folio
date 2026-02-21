@@ -38,15 +38,13 @@
     --bc: 184 179 163;
 }
 
-/* 2. Apply those variables to the body */
 html,
 body {
     scrollbar-width: none;
     -ms-overflow-style: none;
     scroll-behavior: smooth;
-    font-family: "Rethink Sans";
+    font-family: "Roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
-    /* Use the variables here so they swap automatically */
     background-color: var(--bg-main);
     color: var(--text-main);
 }
