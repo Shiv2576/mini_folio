@@ -43,7 +43,19 @@ body {
     scrollbar-width: none;
     -ms-overflow-style: none;
     scroll-behavior: smooth;
-    font-family: "Roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family:
+        "Inter",
+        "SF Pro Text",
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+
+    /* Smooth font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Slightly softer text for writing feel */
+    font-weight: 400;
 
     background-color: var(--bg-main);
     color: var(--text-main);

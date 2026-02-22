@@ -3,14 +3,14 @@ import { useState, useRef } from "react";
 import { skills } from "../../data/data";
 
 const COLORS = [
-  "from-blue-400 to-blue-600",
-  "from-purple-400 to-purple-600",
-  "from-pink-400 to-pink-600",
-  "from-green-400 to-green-600",
-  "from-yellow-400 to-yellow-600",
-  "from-cyan-400 to-cyan-600",
-  "from-red-400 to-red-600",
-  "from-indigo-400 to-indigo-600",
+  ["from-blue-200/60", "to-blue-400/40"],
+  ["from-purple-200/60", "to-purple-400/40"],
+  ["from-pink-200/60", "to-pink-400/40"],
+  ["from-green-200/60", "to-green-400/40"],
+  ["from-yellow-200/60", "to-yellow-400/40"],
+  ["from-cyan-200/60", "to-cyan-400/40"],
+  ["from-red-200/60", "to-red-400/40"],
+  ["from-indigo-200/60", "to-indigo-400/40"],
 ];
 
 export default function TechLists() {
@@ -29,17 +29,16 @@ export default function TechLists() {
 }
 
 function TechBadge({ skill }) {
-  const [blinkColor, setBlinkColor] = useState(null);
+  const [blinkColors, setBlinkColors] = useState(null);
   const [magnetPos, setMagnetPos] = useState({ x: 0, y: 0 });
   const badgeRef = useRef(null);
 
   const handleMouseEnter = () => {
-    const randomColor = COLORS[Math.floor(Math.random() * COLORS.length)];
-    setBlinkColor(randomColor);
+    const randomColorPair = COLORS[Math.floor(Math.random() * COLORS.length)];
+    setBlinkColors(randomColorPair);
 
-    // Fade out after animation completes
     setTimeout(() => {
-      setBlinkColor(null);
+      setBlinkColors(null);
     }, 600);
   };
 
@@ -54,7 +53,6 @@ function TechBadge({ skill }) {
     const distY = e.clientY - centerY;
     const distance = Math.sqrt(distX * distX + distY * distY);
 
-    // Magnetic pull only within 100px
     if (distance < 100) {
       setMagnetPos({
         x: distX * 0.2,
@@ -65,25 +63,18 @@ function TechBadge({ skill }) {
 
   const handleMouseLeave = () => {
     setMagnetPos({ x: 0, y: 0 });
+    setBlinkColors(null);
   };
 
   return (
     <div ref={badgeRef} className="relative">
-      {/* Blink effect - gradient that fades away */}
-      {blinkColor && (
-        <div
-          className={`absolute inset-0 rounded-full bg-gradient-to-r ${blinkColor} opacity-0 blur-md`}
-          style={{
-            animation: "blink 0.6s ease-out forwards",
-          }}
-        />
-      )}
-
       <div
         onMouseEnter={handleMouseEnter}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="relative flex items-center gap-2 px-4 py-2 border border-dashed border-gray-400 rounded-full bg-white hover:border-gray-700 hover:shadow-lg transition-shadow duration-200 cursor-pointer"
+        className={`relative flex items-center gap-2 px-4 py-2 border border-dashed border-gray-400 rounded-full bg-white hover:border-gray-700 hover:shadow-lg transition-all duration-200 cursor-pointer overflow-hidden ${
+          blinkColors ? "border-transparent" : ""
+        }`}
         style={{
           transform: `translate(${magnetPos.x}px, ${magnetPos.y}px)`,
           transition:
@@ -92,21 +83,100 @@ function TechBadge({ skill }) {
               : "none",
         }}
       >
-        <span className="flex items-center justify-center [&_svg]:w-4 [&_svg]:h-4">
+        {/* Faded gradient blink effect */}
+        {blinkColors && (
+          <>
+            {/* Main gradient that moves */}
+            <div
+              className={`absolute inset-0 bg-gradient-to-r ${blinkColors[0]} ${blinkColors[1]}`}
+              style={{
+                animation:
+                  "fadedGradientBlink 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+                zIndex: 0,
+                background: `linear-gradient(105deg, ${blinkColors[0]
+                  .split(" ")[0]
+                  .replace("/60", "")} 0%, ${blinkColors[1]
+                  .split(" ")[0]
+                  .replace("/40", "")} 50%, transparent 100%)`,
+                backgroundSize: "200% 100%",
+                backgroundPosition: "100% 0",
+              }}
+            />
+
+            {/* Soft overlay for extra faded effect */}
+            <div
+              className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent"
+              style={{
+                animation:
+                  "softOverlay 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+                zIndex: 1,
+              }}
+            />
+          </>
+        )}
+
+        {/* Content with higher z-index */}
+        <span className="flex items-center justify-center [&_svg]:w-4 [&_svg]:h-4 relative z-20 mix-blend-multiply">
           {skill.icon}
         </span>
-        <span className="text-sm font-medium text-gray-700">{skill.name}</span>
+        <span className="text-sm font-medium text-gray-700 relative z-20">
+          {skill.name}
+        </span>
       </div>
 
       <style jsx>{`
-        @keyframes blink {
+        @keyframes fadedGradientBlink {
           0% {
-            opacity: 0.8;
-            transform: scale(1);
+            opacity: 0;
+            background-position: 100% 0;
+          }
+          15% {
+            opacity: 0.95;
+          }
+          35% {
+            opacity: 0.85;
+            background-position: 65% 0;
+          }
+          50% {
+            opacity: 0.9;
+            background-position: 50% 0;
+          }
+          65% {
+            opacity: 0.7;
+            background-position: 35% 0;
+          }
+          80% {
+            opacity: 0.4;
+            background-position: 15% 0;
+          }
+          95% {
+            opacity: 0.1;
+            background-position: 5% 0;
           }
           100% {
             opacity: 0;
-            transform: scale(1.2);
+            background-position: -100% 0;
+          }
+        }
+
+        @keyframes softOverlay {
+          0% {
+            opacity: 0;
+          }
+          20% {
+            opacity: 0.25;
+          }
+          40% {
+            opacity: 0.2;
+          }
+          60% {
+            opacity: 0.1;
+          }
+          80% {
+            opacity: 0.05;
+          }
+          100% {
+            opacity: 0;
           }
         }
       `}</style>
