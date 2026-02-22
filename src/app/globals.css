@@ -50,13 +50,37 @@ body {
         BlinkMacSystemFont,
         sans-serif;
 
-    /* Smooth font rendering */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    /* Slightly softer text for writing feel */
     font-weight: 400;
 
     background-color: var(--bg-main);
     color: var(--text-main);
+}
+
+@keyframes shine {
+    0% {
+        background-position: -100%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+.animate-shine {
+    animation: shine 1.2s linear infinite;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        transparent 20%,
+        #000000 40%,
+        #f2fbeb 50%,
+        #000000 60%,
+        transparent 80%,
+        transparent
+    );
+    background-size: 250% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
