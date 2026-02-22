@@ -13,7 +13,6 @@ export default function MorphingThemeToggle({ isDark, onChange }) {
     >
       <input
         type="checkbox"
-        role="switch"
         checked={isDark}
         onChange={(e) => onChange(e.target.checked)}
         className="switch__input"
