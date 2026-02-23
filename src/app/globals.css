@@ -70,17 +70,21 @@ body {
 
 .animate-shine {
     animation: shine 1.2s linear infinite;
+
     background: linear-gradient(
         90deg,
-        transparent,
-        transparent 20%,
-        #000000 40%,
-        #f2fbeb 50%,
-        #000000 60%,
-        transparent 80%,
-        transparent
+        #b8860b 0%,
+        #ffd700 25%,
+        #fff8dc 50%,
+        #ffd700 75%,
+        #b8860b 100%
     );
+
     background-size: 250% 100%;
-    -webkit-background-clip: text;
+
     background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
 }
