@@ -23,7 +23,7 @@ export default function ProjectsList() {
             key={index}
             target="_blank"
             rel="noopener noreferrer"
-            className="group cursor-pointer p-4 border-2 border-base-content/20 hover:border-base-content/80 rounded-2xl hover:scale-[1.02] transition-all duration-200"
+            className="group cursor-pointer p-4 border-1 border-[rgb(var(--text-main))]/80 hover:border-[rgb(var(--primary))] rounded-2xl hover:scale-[1.02] transition-all duration-200"
           >
             <div className="flex flex-col gap-2 justify-between">
               <div className="flex items-center justify-between">

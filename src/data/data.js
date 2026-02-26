@@ -40,6 +40,8 @@ import {
   SiWeb3Dotjs,
   SiVercel,
   SiBlockchaindotcom,
+  SiReactquery,
+  SiReactnative,
 } from "react-icons/si";
 
 export const skills = [
@@ -427,12 +429,56 @@ export const socials = {
 export const projects = {
   pinProjects: [
     {
+      title: "HackerNews App",
+      description:
+        "A modern React Native mobile application that delivers the best of Hacker News in a clean, fast, and user-friendly interface, not just a reader, but a complete participation platform.",
+      tags: [
+        {
+          name: "Expo",
+          logo: (
+            <SiExpo
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
+          ),
+        },
+        {
+          name: "TypeScript",
+          logo: (
+            <SiTypescript
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
+          ),
+        },
+        {
+          name: "React Query",
+          logo: (
+            <SiReactquery
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
+          ),
+        },
+        {
+          name: "React Native",
+          logo: (
+            <SiReact
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
+          ),
+        },
+      ],
+      link: "https://hn-web-five.vercel.app/",
+    },
+    {
       title: "Weave App",
       description:
         "A clean, offline-first app that converts JPEGs to PDFs right in your mobile. No servers, no uploads—just seamless file conversion with local storage and easy sharing. Built this to really understand app versioning and project architecture.",
       tags: [
         {
-          name: "React",
+          name: "React Native",
           logo: (
             <SiReact
               size={14}
