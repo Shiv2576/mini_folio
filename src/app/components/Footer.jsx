@@ -6,14 +6,13 @@ export default function Footer() {
       </div>
       <p className="text-xs mt-2">
         This site follow{" "}
-        <a
-          href="https://github.com/sachinbhujel/NextJS-Portfolio-Template"
+        <span
           target="_blank"
           className="text-sm font-medium hover:underline"
           rel="noopener noreferrer"
         >
           True Minimalism
-        </a>{" "}
+        </span>{" "}
       </p>
     </div>
   );

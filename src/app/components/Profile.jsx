@@ -4,6 +4,7 @@ import { useCallback, useState, useEffect } from "react"; // Added useState, use
 import { socials, about } from "../../data/data";
 import Pixelate from "./pixelate";
 import Image from "next/image";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 export default function Profile() {
   const profileRef = useCallback((node) => {
@@ -76,23 +77,7 @@ export default function Profile() {
         <div className="ml-auto flex flex-col items-end gap-2">
           {" "}
           {/* Stacked layout */}
-          {/* IST Display */}
-          <div className="flex items-center gap-1.5 px-3 py-1 bg-manga-dark/5 dark:bg-manga-light/10 rounded-md border border-manga-dark/20 dark:border-manga-light/20">
-            {/* India Flag Emoji or Icon */}
-            <span className="text-base" role="img" aria-label="India">
-              🇮🇳
-            </span>
-
-            {/* IST Label */}
-            <span className="text-xs font-bold text-manga-dark dark:text-manga-light opacity-70">
-              IST
-            </span>
-
-            {/* Time Display */}
-            <span className="text-sm font-mono font-medium text-manga-dark dark:text-manga-light">
-              {currentTime.ist || "Loading..."}
-            </span>
-          </div>
+          <ThemeSwitcher />
           {/* GMT Display */}
           <div className="flex items-center gap-1.5 px-3 py-1 bg-manga-dark/5 dark:bg-manga-light/10 rounded-md border border-manga-dark/20 dark:border-manga-light/20">
             {/* Globe Icon */}
@@ -156,9 +141,9 @@ export default function Profile() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="24px"
-            width="24px" // Added explicit width
-            viewBox="0 -960 960 960" // Kept original viewBox
-            className="fill-manga-dark dark:fill-manga-light"
+            width="24px"
+            viewBox="0 -960 960 960"
+            className="fill-[rgb(var(--bc))] transition-colors duration-200"
             aria-hidden="false"
             role="img"
           >
@@ -179,7 +164,7 @@ export default function Profile() {
       </div>
 
       {/* Social Links */}
-      <div className="flex items-center mt-5 gap-4">
+      <div className="flex items-center mt-5 gap-5">
         {[
           { link: socials.Linkedin, icon: "linkedin", label: "LinkedIn" },
           { link: socials.github, icon: "github", label: "GitHub" },
@@ -190,7 +175,9 @@ export default function Profile() {
             key={index}
             href={item.link}
             aria-label={item.label}
-            className="p-2 border-2 border-transparent hover:border-manga-dark dark:hover:border-manga-light hover:bg-manga-dark hover:text-manga-light dark:hover:bg-manga-light dark:hover:text-manga-dark transition-all rounded-md text-manga-dark dark:text-manga-light"
+            className="group"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <SocialIcon type={item.icon} title={item.label} />
           </a>
@@ -212,15 +199,18 @@ function SocialIcon({ type, title }) {
     strokeWidth: "2",
     strokeLinecap: "round",
     strokeLinejoin: "round",
-    className: "transition-colors",
+    className:
+      "transition-all duration-200 group-hover:scale-110 stroke-[rgb(var(--bc))]/70 group-hover:stroke-[rgb(var(--bc))] drop-shadow-sm group-hover:drop-shadow-md",
     role: "img",
   };
 
   const wrapIcon = (children) => (
-    <svg {...iconProps}>
-      <title>{title}</title>
-      {children}
-    </svg>
+    <div className="p-1.5 rounded-lg transition-all duration-200 group-hover:bg-[rgb(var(--bc))]/10">
+      <svg {...iconProps}>
+        <title>{title}</title>
+        {children}
+      </svg>
+    </div>
   );
 
   switch (type) {

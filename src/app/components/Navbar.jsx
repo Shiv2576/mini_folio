@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import ThemeToggle from "./themeToggle";
 
 export default function Navbar() {
   // State to track whether mobile menu is hidden or visible
@@ -261,11 +260,6 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-        </div>
-
-        {/* Right section: Theme toggle button */}
-        <div className="flex-shrink-0 z-20">
-          <ThemeToggle isDark={isDark} onChange={handleThemeChange} />
         </div>
       </div>
     </div>

@@ -17,16 +17,6 @@ import {
   SiGit,
   SiSolidity,
   SiTypescript,
-  SiShadcnui,
-  SiFoundryvirtualtabletop,
-  SiCloudfoundry,
-  SiEthereum,
-  SiTelegram,
-  SiBitcoin,
-  SiWeb3Dotjs,
-  SiVercel,
-  SiBlockchaindotcom,
-  SiSwift,
   SiPython,
   SiJupyter,
   SiClaude,
@@ -34,193 +24,374 @@ import {
   SiDrizzle,
   SiVite,
   SiLazyvim,
+  SiShadcnui,
   SiGraphql,
-  SiRedbull,
-  SiZig,
   SiNeovim,
+  SiSwift,
   SiLua,
   SiGithub,
   SiRust,
   SiRadixui,
   SiMdx,
   SiTypst,
+  SiEthereum,
+  SiTelegram,
+  SiBitcoin,
+  SiWeb3Dotjs,
+  SiVercel,
+  SiBlockchaindotcom,
 } from "react-icons/si";
 
 export const skills = [
   {
     name: "JavaScript",
     alt: "js logo",
-    icon: <SiJavascript size={16} className="text-gray-700" />,
+    icon: (
+      <SiJavascript
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Tailwind",
     alt: "tailwind logo",
-    icon: <SiTailwindcss size={16} className="text-gray-700" />,
+    icon: (
+      <SiTailwindcss
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "React Js",
     alt: "react logo",
-    icon: <SiReact size={16} className="text-gray-700" />,
+    icon: (
+      <SiReact
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Next Js",
     alt: "nextjs logo",
-    icon: <SiNextdotjs size={16} className="text-gray-700" />,
+    icon: (
+      <SiNextdotjs
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Supabase",
     alt: "supabase logo",
-    icon: <SiSupabase size={16} className="text-gray-700" />,
+    icon: (
+      <SiSupabase
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Nuxt",
     alt: "nuxt logo",
-    icon: <SiNuxtdotjs size={16} className="text-gray-700" />,
+    icon: (
+      <SiNuxtdotjs
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Go",
     alt: "go logo",
-    icon: <SiGo size={16} className="text-gray-700" />,
+    icon: (
+      <SiGo
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Expo",
     alt: "Expo logo",
-    icon: <SiExpo size={16} className="text-gray-700" />,
+    icon: (
+      <SiExpo
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Docker",
     alt: "docker logo",
-    icon: <SiDocker size={16} className="text-gray-700" />,
+    icon: (
+      <SiDocker
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "bun",
     alt: "bun logo",
-    icon: <SiBun size={16} className="text-gray-700" />,
+    icon: (
+      <SiBun
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Socket.IO",
     alt: "socket.io logo",
-    icon: <SiSocketdotio size={16} className="text-gray-700" />,
+    icon: (
+      <SiSocketdotio
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "MongoDB",
     alt: "mongodb logo",
-    icon: <SiMongodb size={16} className="text-gray-700" />,
+    icon: (
+      <SiMongodb
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Apache Kafka",
     alt: "apache kafka logo",
-    icon: <SiApachekafka size={16} className="text-gray-700" />,
+    icon: (
+      <SiApachekafka
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "PostgreSQL",
     alt: "postgresql logo",
-    icon: <SiPostgresql size={16} className="text-gray-700" />,
+    icon: (
+      <SiPostgresql
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Node.js",
     alt: "nodejs logo",
-    icon: <SiNodedotjs size={16} className="text-gray-700" />,
+    icon: (
+      <SiNodedotjs
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Git",
     alt: "git logo",
-    icon: <SiGit size={16} className="text-gray-700" />,
+    icon: (
+      <SiGit
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Solidity",
     alt: "solidity logo",
-    icon: <SiSolidity size={16} className="text-gray-700" />,
+    icon: (
+      <SiSolidity
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "TypeScript",
     alt: "typescript logo",
-    icon: <SiTypescript size={16} className="text-gray-700" />,
+    icon: (
+      <SiTypescript
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Python",
     alt: "Python logo",
-    icon: <SiPython size={16} className="text-gray-700" />,
+    icon: (
+      <SiPython
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Jupyter",
     alt: "Jupyter logo",
-    icon: <SiJupyter size={16} className="text-gray-700" />,
+    icon: (
+      <SiJupyter
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Claude",
     alt: "Claude logo",
-    icon: <SiClaude size={16} className="text-gray-700" />,
+    icon: (
+      <SiClaude
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Gin",
     alt: "Gin logo",
-    icon: <SiGin size={16} className="text-gray-700" />,
+    icon: (
+      <SiGin
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Drizzle",
     alt: "Drizzle logo",
-    icon: <SiDrizzle size={16} className="text-gray-700" />,
+    icon: (
+      <SiDrizzle
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Vite",
     alt: "Vite logo",
-    icon: <SiVite size={16} className="text-gray-700" />,
+    icon: (
+      <SiVite
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "LazyVim",
     alt: "LazyVim logo",
-    icon: <SiLazyvim size={16} className="text-gray-700" />,
+    icon: (
+      <SiLazyvim
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Shadcn",
     alt: "Shadcn logo",
-    icon: <SiShadcnui size={16} className="text-gray-700" />,
+    icon: (
+      <SiShadcnui
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "GraphQL",
     alt: "GraphQL logo",
-    icon: <SiGraphql size={16} className="text-gray-700" />,
+    icon: (
+      <SiGraphql
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Neovim",
     alt: "Neovim logo",
-    icon: <SiNeovim size={16} className="text-gray-700" />,
+    icon: (
+      <SiNeovim
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Swift",
     alt: "Swift logo",
-    icon: <SiSwift size={16} className="text-gray-700" />,
+    icon: (
+      <SiSwift
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Lua",
     alt: "Lua logo",
-    icon: <SiLua size={16} className="text-gray-700" />,
+    icon: (
+      <SiLua
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Github",
     alt: "Github logo",
-    icon: <SiGithub size={16} className="text-gray-700" />,
+    icon: (
+      <SiGithub
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Rust",
     alt: "Rust logo",
-    icon: <SiRust size={16} className="text-gray-700" />,
+    icon: (
+      <SiRust
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Radix ui",
     alt: "Radixui logo",
-    icon: <SiRadixui size={16} className="text-gray-700" />,
+    icon: (
+      <SiRadixui
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Mdx",
     alt: "Mdx logo",
-    icon: <SiMdx size={16} className="text-gray-700" />,
+    icon: (
+      <SiMdx
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
   {
     name: "Typst",
     alt: "Typst logo",
-    icon: <SiTypst size={16} className="text-gray-700" />,
+    icon: (
+      <SiTypst
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
   },
 ];
 
@@ -263,13 +434,19 @@ export const projects = {
         {
           name: "React",
           logo: (
-            <SiReact size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiReact
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
           ),
         },
         {
           name: "Expo",
           logo: (
-            <SiExpo size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiExpo
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
           ),
         },
         {
@@ -277,7 +454,7 @@ export const projects = {
           logo: (
             <SiTypescript
               size={14}
-              className="text-gray-700 dark:text-gray-300"
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
             />
           ),
         },
@@ -292,7 +469,10 @@ export const projects = {
         {
           name: "React",
           logo: (
-            <SiReact size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiReact
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
           ),
         },
         {
@@ -300,18 +480,26 @@ export const projects = {
           logo: (
             <SiNextdotjs
               size={14}
-              className="text-gray-700 dark:text-gray-300"
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
             />
           ),
         },
         {
           name: "Go",
-          logo: <SiGo size={14} className="text-gray-700 dark:text-gray-300" />,
+          logo: (
+            <SiGo
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
+          ),
         },
         {
           name: "Docker",
           logo: (
-            <SiDocker size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiDocker
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
           ),
         },
         {
@@ -319,7 +507,7 @@ export const projects = {
           logo: (
             <SiShadcnui
               size={14}
-              className="text-gray-700 dark:text-gray-300"
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
             />
           ),
         },
@@ -336,7 +524,7 @@ export const projects = {
           logo: (
             <SiNextdotjs
               size={14}
-              className="text-gray-700 dark:text-gray-300"
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
             />
           ),
         },
@@ -345,7 +533,7 @@ export const projects = {
           logo: (
             <SiSolidity
               size={14}
-              className="text-gray-700 dark:text-gray-300"
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
             />
           ),
         },
@@ -354,14 +542,17 @@ export const projects = {
           logo: (
             <SiShadcnui
               size={14}
-              className="text-gray-700 dark:text-gray-300"
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
             />
           ),
         },
         {
           name: "Docker",
           logo: (
-            <SiDocker size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiDocker
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
           ),
         },
         {
@@ -369,7 +560,7 @@ export const projects = {
           logo: (
             <SiEthereum
               size={14}
-              className="text-gray-700 dark:text-gray-300"
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
             />
           ),
         },
@@ -388,7 +579,7 @@ export const projects = {
           logo: (
             <SiNuxtdotjs
               size={14}
-              className="text-gray-700 dark:text-gray-300"
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
             />
           ),
         },
@@ -397,7 +588,7 @@ export const projects = {
           logo: (
             <SiTelegram
               size={14}
-              className="text-gray-700 dark:text-gray-300"
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
             />
           ),
         },
@@ -406,14 +597,17 @@ export const projects = {
           logo: (
             <SiTypescript
               size={14}
-              className="text-gray-700 dark:text-gray-300"
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
             />
           ),
         },
         {
           name: "Bitcoin",
           logo: (
-            <SiBitcoin size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiBitcoin
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
           ),
         },
       ],
@@ -429,18 +623,26 @@ export const projects = {
           logo: (
             <SiNuxtdotjs
               size={14}
-              className="text-gray-700 dark:text-gray-300"
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
             />
           ),
         },
         {
           name: "Go",
-          logo: <SiGo size={14} className="text-gray-700 dark:text-gray-300" />,
+          logo: (
+            <SiGo
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
+          ),
         },
         {
           name: "Git",
           logo: (
-            <SiGit size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiGit
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
           ),
         },
       ],
@@ -453,18 +655,29 @@ export const projects = {
       tags: [
         {
           name: "Go",
-          logo: <SiGo size={14} className="text-gray-700 dark:text-gray-300" />,
+          logo: (
+            <SiGo
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
+          ),
         },
         {
           name: "Docker",
           logo: (
-            <SiDocker size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiDocker
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
           ),
         },
         {
           name: "Git",
           logo: (
-            <SiGit size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiGit
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
           ),
         },
       ],
@@ -480,7 +693,7 @@ export const projects = {
           logo: (
             <SiSolidity
               size={14}
-              className="text-gray-700 dark:text-gray-300"
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
             />
           ),
         },
@@ -489,7 +702,7 @@ export const projects = {
           logo: (
             <SiWeb3Dotjs
               size={14}
-              className="text-gray-700 dark:text-gray-300"
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
             />
           ),
         },
@@ -498,7 +711,7 @@ export const projects = {
           logo: (
             <SiEthereum
               size={14}
-              className="text-gray-700 dark:text-gray-300"
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
             />
           ),
         },
@@ -513,7 +726,10 @@ export const projects = {
         {
           name: "React",
           logo: (
-            <SiReact size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiReact
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
           ),
         },
         {
@@ -521,14 +737,17 @@ export const projects = {
           logo: (
             <SiTypescript
               size={14}
-              className="text-gray-700 dark:text-gray-300"
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
             />
           ),
         },
         {
           name: "Vercel",
           logo: (
-            <SiVercel size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiVercel
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
           ),
         },
       ],
@@ -541,12 +760,20 @@ export const projects = {
       tags: [
         {
           name: "Go",
-          logo: <SiGo size={14} className="text-gray-700 dark:text-gray-300" />,
+          logo: (
+            <SiGo
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
+          ),
         },
         {
           name: "Docker",
           logo: (
-            <SiDocker size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiDocker
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
           ),
         },
         {
@@ -554,7 +781,7 @@ export const projects = {
           logo: (
             <SiBlockchaindotcom
               size={14}
-              className="text-gray-700 dark:text-gray-300"
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
             />
           ),
         },
@@ -571,14 +798,17 @@ export const projects = {
           logo: (
             <SiJavascript
               size={14}
-              className="text-gray-700 dark:text-gray-300"
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
             />
           ),
         },
         {
           name: "React",
           logo: (
-            <SiReact size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiReact
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
           ),
         },
         {
@@ -586,7 +816,7 @@ export const projects = {
           logo: (
             <SiTailwindcss
               size={14}
-              className="text-gray-700 dark:text-gray-300"
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
             />
           ),
         },
@@ -601,13 +831,19 @@ export const projects = {
         {
           name: "Swift",
           logo: (
-            <SiSwift size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiSwift
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
           ),
         },
         {
           name: "Git",
           logo: (
-            <SiGit size={14} className="text-gray-700 dark:text-gray-300" />
+            <SiGit
+              size={14}
+              className="text-[rgb(var(--bc))] transition-colors duration-200"
+            />
           ),
         },
       ],
