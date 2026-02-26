@@ -10,6 +10,7 @@
     --text-main: #0f0f0f;
     --b1: 218 210 185;
     --bc: 15 15 15;
+    --primary: #cd9a5b; /* Warm amber that complements aged paper */
 }
 
 /* Light theme - Original */
@@ -18,6 +19,7 @@
     --text-main: #0f0f0f;
     --b1: 218 210 185;
     --bc: 15 15 15;
+    --primary: #b57c48; /* Muted gold that blends with parchment */
 }
 
 /* Dark theme - Original */
@@ -26,6 +28,7 @@
     --text-main: #b8b3a3;
     --b1: 25 25 25;
     --bc: 184 179 163;
+    --primary: #d4af37; /* Rich gold that stands out on dark */
 }
 
 /* Sepia theme - Warm, vintage paper */
@@ -34,6 +37,7 @@
     --text-main: #5f4b3a;
     --b1: 225 209 179;
     --bc: 95 75 58;
+    --primary: #a67b5b; /* Warm brown that blends with sepia */
     --rosewater: #e5c9a8;
     --flamingo: #dbb68c;
     --pink: #d4a5a5;
@@ -56,6 +60,7 @@
     --text-main: #4c4f69;
     --b1: 230 233 239;
     --bc: 76 79 105;
+    --primary: #7c5e9c; /* Softer mauve that blends with Latte palette */
     --rosewater: #dc8a78;
     --flamingo: #dd7878;
     --pink: #ea76cb;
@@ -78,6 +83,7 @@
     --text-main: #c6d0f5;
     --b1: 48 52 70;
     --bc: 198 208 245;
+    --primary: #b7a1d6; /* Softer mauve that blends with Frappe palette */
     --rosewater: #f2d5cf;
     --flamingo: #eebebe;
     --pink: #f4b8e4;
@@ -100,6 +106,7 @@
     --text-main: #cad3f5;
     --b1: 36 39 58;
     --bc: 202 211 245;
+    --primary: #b8a2d6; /* Softer mauve that blends with Macchiato palette */
     --rosewater: #f4dbd6;
     --flamingo: #f0c6c6;
     --pink: #f5bde6;
@@ -122,6 +129,7 @@
     --text-main: #cdd6f4;
     --b1: 30 30 46;
     --bc: 205 214 244;
+    --primary: #baa5da; /* Softer mauve that blends with Mocha palette */
     --rosewater: #f5e0dc;
     --flamingo: #f2cdcd;
     --pink: #f5c2e7;
@@ -138,12 +146,13 @@
     --lavender: #b4befe;
 }
 
-/* Optional: Nord theme */
+/* Nord theme */
 [data-theme="nord"] {
     --bg-main: #2e3440;
     --text-main: #d8dee9;
     --b1: 46 52 64;
     --bc: 216 222 233;
+    --primary: #81a1c1; /* Nord frost blue - blends naturally */
     --rosewater: #e5b9b7;
     --flamingo: #bf616a;
     --pink: #b48ead;

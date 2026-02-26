@@ -5,7 +5,7 @@ import { skills } from "../../data/data";
 export default function TechLists() {
   return (
     <div className="mt-10">
-      <h2 className="text-xl font-medium before:content-['>'] before:mr-1">
+      <h2 className="text-xl font-medium before:content-['>'] before:mr-1 text-[rgb(var(--text-main))]">
         Tech Stack
       </h2>
       <div className="flex flex-wrap gap-3 mt-4">
@@ -81,7 +81,7 @@ function TechBadge({ skill }) {
           willChange: "transform",
         }}
       >
-        <span className="flex items-center justify-center [&_svg]:w-4 [&_svg]:h-4">
+        <span className="flex items-center justify-center [&_svg]:w-4 [&_svg]:h-4 [&_svg]:text-[var(--primary)] [&_svg_path]:fill-current [&_svg]:fill-current">
           {skill.icon}
         </span>
 

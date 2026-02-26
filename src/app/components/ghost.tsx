@@ -41,7 +41,7 @@ export default function Ghost({
 
   const [mouse, setMouse] = useState(getInitialPos(spawnX, spawnY));
   const [clicked, setClicked] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   // Keep refs synced with state for use in RAF loop
@@ -56,47 +56,42 @@ export default function Ghost({
     clickedRef.current = clicked;
   }, [clicked]);
 
-  // Dark mode listener with fade animation
+  // Theme check function - only allow specific themes
+  const checkTheme = () => {
+    const dataTheme = document.documentElement.getAttribute("data-theme");
+
+    // List of allowed themes
+    const allowedThemes = ["dark", "frappe", "macchiato", "mocha", "nord"];
+
+    // Check if current theme is in allowed list
+    const isAllowed = dataTheme ? allowedThemes.includes(dataTheme) : false;
+
+    setIsDarkTheme(isAllowed);
+
+    // Trigger visibility with a slight delay to allow state update
+    setTimeout(() => {
+      setIsVisible(isAllowed);
+    }, 0);
+  };
+
+  // Theme listener with fade animation
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    // Check initial dark mode state
-    const checkDarkMode = () => {
-      const dataTheme = document.documentElement.getAttribute("data-theme");
-      const isDark =
-        dataTheme === "dark" ||
-        (dataTheme !== "light" &&
-          (window.matchMedia("(prefers-color-scheme: dark)").matches ||
-            document.documentElement.classList.contains("dark")));
+    // Check initial theme
+    checkTheme();
 
-      setIsDarkMode(isDark);
-
-      // Trigger visibility with a slight delay to allow state update
-      setTimeout(() => {
-        setIsVisible(isDark);
-      }, 0);
-    };
-
-    checkDarkMode();
-
-    // Listen for system theme changes
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    mediaQuery.addEventListener("change", () => {
-      checkDarkMode();
-    });
-
-    // Listen for attribute changes on html element (data-theme, class, etc.)
+    // Listen for attribute changes on html element (data-theme)
     const observer = new MutationObserver(() => {
-      checkDarkMode();
+      checkTheme();
     });
 
     observer.observe(document.documentElement, {
       attributes: true,
-      attributeFilter: ["class", "data-theme"],
+      attributeFilter: ["data-theme"],
     });
 
     return () => {
-      mediaQuery.removeEventListener("change", checkDarkMode);
       observer.disconnect();
     };
   }, []);
@@ -154,7 +149,7 @@ export default function Ghost({
   }, []);
 
   useEffect(() => {
-    if (typeof window === "undefined" || !isDarkMode) return;
+    if (typeof window === "undefined" || !isDarkTheme) return;
 
     const initialPos = getInitialPos(spawnX, spawnY);
     const pos = {
@@ -208,7 +203,7 @@ export default function Ghost({
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
-  }, [isDarkMode, spawnX, spawnY]);
+  }, [isDarkTheme, spawnX, spawnY]);
 
   return (
     <div
@@ -216,6 +211,7 @@ export default function Ghost({
       style={{
         opacity: isVisible ? 1 : 0,
         transition: `opacity ${fadeSpeed}ms ease-in-out`,
+        pointerEvents: isVisible ? "auto" : "none", // Prevent interaction when invisible
       }}
     >
       <svg
