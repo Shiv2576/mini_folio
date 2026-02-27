@@ -144,13 +144,13 @@ export default function Navbar() {
       */}
       <div className="w-[97%] sm:w-[100%] flex items-center justify-between bg-gray-10/50 backdrop-blur-sm py-5 px-4 sm:px-12 relative mx-[-20px] gap-2 sm:gap-6">
         {/* Bottom extended dashed border */}
-        <div className="absolute -bottom-[1px] -left-[100px] -right-[100px] border-b-[1.5px] border-dashed border-base-content/40" />
+        <div className="absolute -bottom-[1px] -left-[100px] -right-[100px] border-t-[1.5px] border-dashed border-[rgb(var(--bc))]" />
 
         {/* Left extended dashed border */}
-        <div className="absolute -left-[1px] -top-[1500px] -bottom-[1500px] border-l-[1.5px] border-dashed border-base-content/40" />
+        <div className="absolute -left-[1px] -top-[1500px] -bottom-[1500px] border-l-[1.5px] border-dashed border-[rgb(var(--bc))]" />
 
         {/* Right extended dashed border */}
-        <div className="absolute -right-[1px] -top-[1500px] -bottom-[1500px] border-r-[1.5px] border-dashed border-base-content/40" />
+        <div className="absolute -right-[1px] -top-[1500px] -bottom-[1500px] border-r-[1.5px] border-dashed border-[rgb(var(--bc))]" />
 
         {/*
           Left section: Mobile menu toggle button with morphing hamburger icon
@@ -218,10 +218,10 @@ export default function Navbar() {
             className={`
               flex flex-col items-center justify-center
               fixed top-20 left-[5%] w-[90%]
-              bg-[#e8e2d0] dark:bg-base-200 backdrop-blur-sm border border-base-content/30
-              py-2 px-4 gap-2 rounded-lg
-              sm:static sm:flex-row sm:bg-transparent dark:sm:bg-transparent sm:border-none
-              sm:py-0 sm:px-0 sm:gap-4 sm:rounded-none sm:backdrop-blur-0
+              bg-[rgb(var(--b1))] border border-[rgb(var(--bc))]/30
+              py-2 px-4 gap-2 rounded-lg shadow-lg
+              sm:static sm:flex-row sm:bg-transparent sm:border-none
+              sm:py-0 sm:px-0 sm:gap-4 sm:rounded-none sm:shadow-none
               sm:justify-center sm:items-center
               ${hideOnMobile ? "hidden" : "flex"} sm:flex
               transition-all duration-300
@@ -230,7 +230,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/#about"
-                className="hover:underline font-medium text-base whitespace-nowrap"
+                className="hover:underline font-medium text-base whitespace-nowrap text-[rgb(var(--text-main))] hover:text-[rgb(var(--primary))] transition-colors duration-200"
               >
                 About
               </Link>
@@ -238,7 +238,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/#projects"
-                className="hover:underline font-medium text-base whitespace-nowrap"
+                className="hover:underline font-medium text-base whitespace-nowrap text-[rgb(var(--text-main))] hover:text-[rgb(var(--primary))] transition-colors duration-200"
               >
                 Projects
               </Link>
@@ -246,7 +246,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/#experience"
-                className="hover:underline font-medium text-base whitespace-nowrap"
+                className="hover:underline font-medium text-base whitespace-nowrap text-[rgb(var(--text-main))] hover:text-[rgb(var(--primary))] transition-colors duration-200"
               >
                 Experience
               </Link>
@@ -254,7 +254,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/blogs"
-                className="hover:underline font-medium text-base whitespace-nowrap"
+                className="hover:underline font-medium text-base whitespace-nowrap text-[rgb(var(--text-main))] hover:text-[rgb(var(--primary))] transition-colors duration-200"
               >
                 Blogs
               </Link>

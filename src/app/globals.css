@@ -4,7 +4,6 @@
     themes: "light", "dark", "sepia", "latte", "frappe", "macchiato", "mocha";
 }
 
-/* Base theme variables */
 :root {
     --bg-main: #e8e2d0;
     --text-main: #0f0f0f;

@@ -41,7 +41,7 @@ import {
   SiVercel,
   SiBlockchaindotcom,
   SiReactquery,
-  SiReactnative,
+  SiSentry,
 } from "react-icons/si";
 
 export const skills = [
@@ -90,6 +90,16 @@ export const skills = [
     alt: "supabase logo",
     icon: (
       <SiSupabase
+        size={16}
+        className="text-[rgb(var(--bc))] transition-colors duration-200"
+      />
+    ),
+  },
+  {
+    name: "Sentry",
+    alt: "sentry logo",
+    icon: (
+      <SiSentry
         size={16}
         className="text-[rgb(var(--bc))] transition-colors duration-200"
       />
