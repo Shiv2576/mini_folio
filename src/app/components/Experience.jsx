@@ -37,9 +37,6 @@ export default function Experience() {
           ))}
         </ol>
       </div>
-
-      {/* Decorative dashed line at bottom */}
-      <div className="absolute -inset-x-5 md:-inset-x-[120px] -bottom-22 md:-bottom-[90px] border-b-[1.5px] border-dashed border-[rgb(var(--bc))]" />
     </div>
   );
 }

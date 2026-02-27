@@ -2,11 +2,11 @@
 
 /* Light theme - Original */
 [data-theme="light"] {
-    --bg-main: 232 226 208;
-    --text-main: 15 15 15;
-    --b1: 218 210 185;
-    --bc: 15 15 15;
-    --primary: 181 124 72;
+    --bg-main: 255 250 240;
+    --text-main: 20 20 20;
+    --b1: 245 225 200;
+    --bc: 80 50 30;
+    --primary: 180 70 120;
 }
 
 /* Dark theme - Original */
