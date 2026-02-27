@@ -1,171 +1,75 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
-@plugin "daisyui" {
-    themes: "light", "dark", "sepia", "latte", "frappe", "macchiato", "mocha";
-}
-
-:root {
-    --bg-main: #e8e2d0;
-    --text-main: #0f0f0f;
-    --b1: 218 210 185;
-    --bc: 15 15 15;
-    --primary: #cd9a5b; /* Warm amber that complements aged paper */
-}
 
 /* Light theme - Original */
 [data-theme="light"] {
-    --bg-main: #e8e2d0;
-    --text-main: #0f0f0f;
+    --bg-main: 232 226 208;
+    --text-main: 15 15 15;
     --b1: 218 210 185;
     --bc: 15 15 15;
-    --primary: #b57c48; /* Muted gold that blends with parchment */
+    --primary: 181 124 72;
 }
 
 /* Dark theme - Original */
 [data-theme="dark"] {
-    --bg-main: #0d0d0d;
-    --text-main: #b8b3a3;
+    --bg-main: 13 13 13;
+    --text-main: 184 179 163;
     --b1: 25 25 25;
     --bc: 184 179 163;
-    --primary: #d4af37; /* Rich gold that stands out on dark */
+    --primary: 212 175 55;
 }
 
-/* Sepia theme - Warm, vintage paper */
+/* Sepia theme */
 [data-theme="sepia"] {
-    --bg-main: #f1e7d0;
-    --text-main: #5f4b3a;
+    --bg-main: 241 231 208;
+    --text-main: 95 75 58;
     --b1: 225 209 179;
     --bc: 95 75 58;
-    --primary: #a67b5b; /* Warm brown that blends with sepia */
-    --rosewater: #e5c9a8;
-    --flamingo: #dbb68c;
-    --pink: #d4a5a5;
-    --mauve: #b38b8b;
-    --red: #b55a4a;
-    --maroon: #a54e3c;
-    --peach: #cc7e5a;
-    --yellow: #d9a845;
-    --green: #7a9f6e;
-    --teal: #528a8a;
-    --sky: #6797a8;
-    --sapphire: #4f7a8a;
-    --blue: #5a7a9a;
-    --lavender: #8f8ab3;
+    --primary: 166 123 91;
 }
 
-/* Latte theme (Catppuccin Latte) - Light, soft */
+/* Latte theme */
 [data-theme="latte"] {
-    --bg-main: #eff1f5;
-    --text-main: #4c4f69;
+    --bg-main: 239 241 245;
+    --text-main: 76 79 105;
     --b1: 230 233 239;
     --bc: 76 79 105;
-    --primary: #7c5e9c; /* Softer mauve that blends with Latte palette */
-    --rosewater: #dc8a78;
-    --flamingo: #dd7878;
-    --pink: #ea76cb;
-    --mauve: #8839ef;
-    --red: #d20f39;
-    --maroon: #e64553;
-    --peach: #fe640b;
-    --yellow: #df8e1d;
-    --green: #40a02b;
-    --teal: #179299;
-    --sky: #04a5e5;
-    --sapphire: #209fb5;
-    --blue: #1e66f5;
-    --lavender: #7287fd;
+    --primary: 124 94 156;
 }
 
-/* Frappe theme (Catppuccin Frappe) - Muted, dusk */
+/* Frappe theme */
 [data-theme="frappe"] {
-    --bg-main: #303446;
-    --text-main: #c6d0f5;
+    --bg-main: 48 52 70;
+    --text-main: 198 208 245;
     --b1: 48 52 70;
     --bc: 198 208 245;
-    --primary: #b7a1d6; /* Softer mauve that blends with Frappe palette */
-    --rosewater: #f2d5cf;
-    --flamingo: #eebebe;
-    --pink: #f4b8e4;
-    --mauve: #ca9ee6;
-    --red: #e78284;
-    --maroon: #ea999c;
-    --peach: #ef9f76;
-    --yellow: #e5c890;
-    --green: #a6d189;
-    --teal: #81c8be;
-    --sky: #99d1db;
-    --sapphire: #85c1dc;
-    --blue: #8caaee;
-    --lavender: #babbf1;
+    --primary: 183 161 214;
 }
 
-/* Macchiato theme (Catppuccin Macchiato) - Darker, richer */
+/* Macchiato theme */
 [data-theme="macchiato"] {
-    --bg-main: #24273a;
-    --text-main: #cad3f5;
+    --bg-main: 36 39 58;
+    --text-main: 202 211 245;
     --b1: 36 39 58;
     --bc: 202 211 245;
-    --primary: #b8a2d6; /* Softer mauve that blends with Macchiato palette */
-    --rosewater: #f4dbd6;
-    --flamingo: #f0c6c6;
-    --pink: #f5bde6;
-    --mauve: #c6a0f6;
-    --red: #ed8796;
-    --maroon: #ee99a0;
-    --peach: #f5a97f;
-    --yellow: #eed49f;
-    --green: #a6da95;
-    --teal: #8bd5ca;
-    --sky: #91d7e3;
-    --sapphire: #7dc4e4;
-    --blue: #8aadf4;
-    --lavender: #b7bdf8;
+    --primary: 184 162 214;
 }
 
-/* Mocha theme (Catppuccin Mocha) - Darkest, vibrant */
+/* Mocha theme */
 [data-theme="mocha"] {
-    --bg-main: #1e1e2e;
-    --text-main: #cdd6f4;
+    --bg-main: 30 30 46;
+    --text-main: 205 214 244;
     --b1: 30 30 46;
     --bc: 205 214 244;
-    --primary: #baa5da; /* Softer mauve that blends with Mocha palette */
-    --rosewater: #f5e0dc;
-    --flamingo: #f2cdcd;
-    --pink: #f5c2e7;
-    --mauve: #cba6f7;
-    --red: #f38ba8;
-    --maroon: #eba0ac;
-    --peach: #fab387;
-    --yellow: #f9e2af;
-    --green: #a6e3a1;
-    --teal: #94e2d5;
-    --sky: #89dceb;
-    --sapphire: #74c7ec;
-    --blue: #89b4fa;
-    --lavender: #b4befe;
+    --primary: 186 165 218;
 }
 
 /* Nord theme */
 [data-theme="nord"] {
-    --bg-main: #2e3440;
-    --text-main: #d8dee9;
+    --bg-main: 46 52 64;
+    --text-main: 216 222 233;
     --b1: 46 52 64;
     --bc: 216 222 233;
-    --primary: #81a1c1; /* Nord frost blue - blends naturally */
-    --rosewater: #e5b9b7;
-    --flamingo: #bf616a;
-    --pink: #b48ead;
-    --mauve: #5e81ac;
-    --red: #bf616a;
-    --maroon: #d08770;
-    --peach: #d08770;
-    --yellow: #ebcb8b;
-    --green: #a3be8c;
-    --teal: #8fbcbb;
-    --sky: #81a1c1;
-    --sapphire: #5e81ac;
-    --blue: #81a1c1;
-    --lavender: #b48ead;
+    --primary: 129 161 193;
 }
 
 html,
@@ -185,8 +89,8 @@ body {
 
     font-weight: 400;
 
-    background-color: var(--bg-main);
-    color: var(--text-main);
+    background-color: rgb(var(--bg-main));
+    color: rgb(var(--text-main));
     transition:
         background-color 0.3s ease,
         color 0.2s ease;

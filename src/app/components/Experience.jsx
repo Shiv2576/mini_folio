@@ -9,14 +9,17 @@ export default function Experience() {
 
       <div className="mt-6 relative">
         {/* Vertical line - positioned absolutely */}
-        <div className="absolute left-[3px] top-2 bottom-2 w-0.5 bg-[rgb(var(--bc))]/30 rounded-full"></div>
+        <div className="absolute left-[5px] top-2 bottom-2 w-0.5 bg-[rgb(var(--bc))]/30 rounded-full"></div>
 
         {/* Experience items */}
         <ol className="space-y-8">
-          {experience.map((item, index) => (
-            <li key={index} className="relative flex gap-4 pl-4">
+          {experience.map((item) => (
+            <li
+              key={item.id || item.title + item.date}
+              className="relative flex gap-4 pl-4"
+            >
               {/* Timeline dot */}
-              <div className="absolute left-0 top-1.5 w-2 h-2 rounded-full bg-[rgb(var(--bc))] border-2 border-[rgb(var(--bg-main))]"></div>
+              <div className="absolute left-0 top-1.5 w-3 h-3 rounded-full bg-[rgb(var(--bc))] border-2 border-[rgb(var(--bg-main))]"></div>
 
               {/* Content */}
               <div className="flex-1">

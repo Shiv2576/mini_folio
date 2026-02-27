@@ -1,169 +1,105 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { usePathname } from "next/navigation";
 
-export default function Navbar() {
-  // State to track whether mobile menu is hidden or visible
-  const [hideOnMobile, setHideOnMobile] = useState(true);
-  // Get current URL path to determine active page
-  const pathname = usePathname();
-  // State to track current theme (dark/light)
-  const [isDark, setIsDark] = useState(false);
-  // Boolean to check if we're on the blogs page
-  const blogs = pathname === "/blogs";
+// Animation keyframes
+const ANIMATION_STYLES = `
+  @keyframes morphLineTop {
+    0% { d: path('M 4 6 L 20 6'); }
+    100% { d: path('M 5 5 L 19 19'); }
+  }
+  @keyframes morphLineMiddle {
+    0% { opacity: 1; transform: scaleX(1); }
+    100% { opacity: 0; transform: scaleX(0); }
+  }
+  @keyframes morphLineBottom {
+    0% { d: path('M 4 18 L 20 18'); }
+    100% { d: path('M 19 5 L 5 19'); }
+  }
+  @keyframes reverseMorphLineTop {
+    0% { d: path('M 5 5 L 19 19'); }
+    100% { d: path('M 4 6 L 20 6'); }
+  }
+  @keyframes reverseMorphLineMiddle {
+    0% { opacity: 0; transform: scaleX(0); }
+    100% { opacity: 1; transform: scaleX(1); }
+  }
+  @keyframes reverseMorphLineBottom {
+    0% { d: path('M 19 5 L 5 19'); }
+    100% { d: path('M 4 18 L 20 18'); }
+  }
+  .hamburger-icon.active .line-top {
+    animation: morphLineTop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+  .hamburger-icon.active .line-middle {
+    animation: morphLineMiddle 0.3s ease-in-out forwards;
+  }
+  .hamburger-icon.active .line-bottom {
+    animation: morphLineBottom 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+  .hamburger-icon:not(.active) .line-top {
+    animation: reverseMorphLineTop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+  .hamburger-icon:not(.active) .line-middle {
+    animation: reverseMorphLineMiddle 0.3s ease-in-out forwards;
+  }
+  .hamburger-icon:not(.active) .line-bottom {
+    animation: reverseMorphLineBottom 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+`;
 
-  // useEffect runs once on component mount to set initial theme
+// Navigation links data
+const NAV_LINKS = [
+  { href: "/#about", label: "About" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#experience", label: "Experience" },
+  { href: "/blogs", label: "Blogs" },
+];
+
+export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   useEffect(() => {
-    // Try to get saved theme from browser's localStorage
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      // If theme was saved, use it
-      setIsDark(savedTheme === "dark");
-      document.documentElement.setAttribute("data-theme", savedTheme);
-    } else {
-      // If no saved theme, check user's system preference
-      const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)",
-      ).matches;
-      setIsDark(prefersDark);
-      document.documentElement.setAttribute(
-        "data-theme",
-        prefersDark ? "dark" : "light",
-      );
-    }
+    setIsMenuOpen(false);
   }, []);
 
-  // Function to handle theme toggle
-  const handleThemeChange = (checked) => {
-    const newTheme = checked ? "dark" : "light";
-    setIsDark(checked);
-    // Apply theme to the root HTML element
-    document.documentElement.setAttribute("data-theme", newTheme);
-    // Save theme preference to localStorage
-    localStorage.setItem("theme", newTheme);
-  };
+  // Handle escape key to close menu
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === "Escape" && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [isMenuOpen]);
+
+  // Memoized menu toggle handler
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen((prev) => !prev);
+  }, []);
 
   return (
     <div className="flex justify-center sticky top-0 items-center w-full z-10">
-      <style>{`
-        @keyframes morphLineTop {
-          0% {
-            d: path('M 4 6 L 20 6');
-          }
-          100% {
-            d: path('M 5 5 L 19 19');
-          }
-        }
+      <style>{ANIMATION_STYLES}</style>
 
-        @keyframes morphLineMiddle {
-          0% {
-            opacity: 1;
-            transform: scaleX(1);
-          }
-          100% {
-            opacity: 0;
-            transform: scaleX(0);
-          }
-        }
+      <div className="w-[97%] sm:w-full flex items-center justify-between bg-gray-10/50 backdrop-blur-sm py-5 px-4 sm:px-12 relative mx-[-20px] gap-2 sm:gap-6">
+        {/* Decorative borders */}
+        <div className="absolute -bottom-px -left-[100px] -right-[100px] border-t-[1.5px] border-dashed border-[rgb(var(--bc))]" />
+        <div className="absolute -left-px -top-[25px] -bottom-[790px] border-l-[1.5px] border-dashed border-[rgb(var(--bc))]" />
+        <div className="absolute -right-px -top-[25px] -bottom-[790px] border-r-[1.5px] border-dashed border-[rgb(var(--bc))]" />
 
-        @keyframes morphLineBottom {
-          0% {
-            d: path('M 4 18 L 20 18');
-          }
-          100% {
-            d: path('M 19 5 L 5 19');
-          }
-        }
-
-        @keyframes reverseMorphLineTop {
-          0% {
-            d: path('M 5 5 L 19 19');
-          }
-          100% {
-            d: path('M 4 6 L 20 6');
-          }
-        }
-
-        @keyframes reverseMorphLineMiddle {
-          0% {
-            opacity: 0;
-            transform: scaleX(0);
-          }
-          100% {
-            opacity: 1;
-            transform: scaleX(1);
-          }
-        }
-
-        @keyframes reverseMorphLineBottom {
-          0% {
-            d: path('M 19 5 L 5 19');
-          }
-          100% {
-            d: path('M 4 18 L 20 18');
-          }
-        }
-
-        .hamburger-icon.active .line-top {
-          animation: morphLineTop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-        }
-
-        .hamburger-icon.active .line-middle {
-          animation: morphLineMiddle 0.3s ease-in-out forwards;
-        }
-
-        .hamburger-icon.active .line-bottom {
-          animation: morphLineBottom 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-        }
-
-        .hamburger-icon:not(.active) .line-top {
-          animation: reverseMorphLineTop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-        }
-
-        .hamburger-icon:not(.active) .line-middle {
-          animation: reverseMorphLineMiddle 0.3s ease-in-out forwards;
-        }
-
-        .hamburger-icon:not(.active) .line-bottom {
-          animation: reverseMorphLineBottom 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-        }
-      `}</style>
-
-      {/*
-        Main navbar container
-        - w-[95%] sm:w-[100%]: 95% width on mobile, 100% on desktop
-        - flex items-center justify-between: horizontal layout with space between left and right
-        - bg-gray-10/50: semi-transparent background
-        - backdrop-blur-sm: blur effect for glassmorphism
-        - py-5: padding top and bottom
-        - px-4 sm:px-12: 4 units padding on mobile, 12 units on desktop
-        - relative: needed for absolute positioned border elements
-        - mx-[-20px]: negative margin to extend width
-        - gap-2 sm:gap-6: spacing between flex items
-      */}
-      <div className="w-[97%] sm:w-[100%] flex items-center justify-between bg-gray-10/50 backdrop-blur-sm py-5 px-4 sm:px-12 relative mx-[-20px] gap-2 sm:gap-6">
-        {/* Bottom extended dashed border */}
-        <div className="absolute -bottom-[1px] -left-[100px] -right-[100px] border-t-[1.5px] border-dashed border-[rgb(var(--bc))]" />
-
-        {/* Left extended dashed border */}
-        <div className="absolute -left-[1px] -top-[1500px] -bottom-[1500px] border-l-[1.5px] border-dashed border-[rgb(var(--bc))]" />
-
-        {/* Right extended dashed border */}
-        <div className="absolute -right-[1px] -top-[1500px] -bottom-[1500px] border-r-[1.5px] border-dashed border-[rgb(var(--bc))]" />
-
-        {/*
-          Left section: Mobile menu toggle button with morphing hamburger icon
-          - Only visible on mobile (sm:hidden)
-          - SVG animates between hamburger (3 lines) and X cross
-          - z-20: ensures it stays on top of dropdown menu
-          - flex-shrink-0: prevents button from shrinking
-        */}
+        {/* Mobile menu button with animation */}
         <button
           type="button"
-          onClick={() => setHideOnMobile(!hideOnMobile)}
-          className="sm:hidden relative z-20 flex-shrink-0"
-          aria-label="Toggle navigation menu"
+          onClick={toggleMenu}
+          className="sm:hidden relative z-20 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-[rgb(var(--primary))]/30 rounded-md p-1"
+          aria-label={
+            isMenuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
+          aria-expanded={isMenuOpen}
         >
           <svg
             width="24"
@@ -173,47 +109,19 @@ export default function Navbar() {
             stroke="currentColor"
             strokeWidth="2.5"
             strokeLinecap="round"
-            className={`hamburger-icon cursor-pointer transition-colors duration-300 ${
-              !hideOnMobile ? "active" : ""
+            className={`hamburger-icon transition-colors duration-300 text-[rgb(var(--text-main))] ${
+              isMenuOpen ? "active" : ""
             }`}
+            aria-hidden="true"
           >
-            {/* Top line - morphs to top-left diagonal of X */}
             <path className="line-top" d="M 4 6 L 20 6" />
-            {/* Middle line - disappears */}
             <path className="line-middle" d="M 4 12 L 20 12" />
-            {/* Bottom line - morphs to bottom-left diagonal of X */}
             <path className="line-bottom" d="M 4 18 L 20 18" />
           </svg>
         </button>
 
-        {/*
-          Center section: Navigation links container wrapper
-          - flex-1: takes available space and centers content
-          - flex justify-center: centers all nav items
-          - min-w-0: allows flex container to shrink if needed
-          - Organizes layout on both mobile and desktop views
-        */}
+        {/* Navigation links */}
         <div className="flex-1 flex justify-center min-w-0">
-          {/*
-            Navigation links list
-            - On mobile: hidden by default, shows as vertical dropdown when menu is open
-            - On desktop: always visible as horizontal navigation
-
-            Mobile styling:
-            - fixed: positioned relative to viewport
-            - top-20: starts below the navbar
-            - left-[5%] w-[90%]: positioned at 5% from left with 90% width
-            - flex-col: vertical stacking
-            - gap-2: tight spacing
-
-            Desktop styling:
-            - sm:static: normal document flow
-            - sm:flex-row: horizontal layout
-            - sm:gap-4: wider spacing on desktop
-            - sm:bg-transparent: no background
-            - sm:border-transparent: no borders
-            - sm:p-0: no padding
-          */}
           <ul
             className={`
               flex flex-col items-center justify-center
@@ -223,42 +131,22 @@ export default function Navbar() {
               sm:static sm:flex-row sm:bg-transparent sm:border-none
               sm:py-0 sm:px-0 sm:gap-4 sm:rounded-none sm:shadow-none
               sm:justify-center sm:items-center
-              ${hideOnMobile ? "hidden" : "flex"} sm:flex
               transition-all duration-300
+              ${isMenuOpen ? "flex" : "hidden sm:flex"}
             `}
+            aria-label="Main navigation"
           >
-            <li>
-              <Link
-                href="/#about"
-                className="hover:underline font-medium text-base whitespace-nowrap text-[rgb(var(--text-main))] hover:text-[rgb(var(--primary))] transition-colors duration-200"
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#projects"
-                className="hover:underline font-medium text-base whitespace-nowrap text-[rgb(var(--text-main))] hover:text-[rgb(var(--primary))] transition-colors duration-200"
-              >
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#experience"
-                className="hover:underline font-medium text-base whitespace-nowrap text-[rgb(var(--text-main))] hover:text-[rgb(var(--primary))] transition-colors duration-200"
-              >
-                Experience
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/blogs"
-                className="hover:underline font-medium text-base whitespace-nowrap text-[rgb(var(--text-main))] hover:text-[rgb(var(--primary))] transition-colors duration-200"
-              >
-                Blogs
-              </Link>
-            </li>
+            {NAV_LINKS.map(({ href, label }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className="hover:underline font-medium text-base whitespace-nowrap text-[rgb(var(--text-main))] hover:text-[rgb(var(--primary))] transition-colors duration-200"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
