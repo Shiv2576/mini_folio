@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState, useCallback } from "react";
-import { usePathname } from "next/navigation";
 
 // Animation keyframes
 const ANIMATION_STYLES = `

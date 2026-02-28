@@ -2,7 +2,6 @@
 
 import { useCallback, useState, useEffect } from "react"; // Added useState, useEffect
 import { socials, about } from "../../data/data";
-import Pixelate from "./pixelate";
 import Image from "next/image";
 import ThemeSwitcher from "./ThemeSwitcher";
 
@@ -55,11 +54,7 @@ export default function Profile() {
 
   return (
     <div className="flex flex-col items-start">
-      {/* Pixelate Wrapper */}
-      <div
-        ref={profileRef}
-        className="relative w-[80px] h-[80px] rounded-full overflow-hidden border-2 border-manga-dark shadow-[4px_4px_0px_0px_rgba(23,18,25,1)] dark:border-manga-light dark:shadow-none"
-      >
+      <div className="relative w-[80px] h-[80px] aspect-square overflow-hidden border-1 border-manga-dark shadow-[4px_4px_0px_0px_rgba(23,18,25,1)] dark:border-manga-light dark:shadow-none">
         <Image
           src="/profile1.jpg"
           fill

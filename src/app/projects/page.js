@@ -10,7 +10,6 @@ export default function Projects() {
   return (
     <div className="md:w-[700px] w-[100%] mt-5 p-4">
       <main className="flex flex-col gap-4">
-        {/* Back Button and Header */}
         <div className="flex flex-col gap-4">
           <button
             type="button"

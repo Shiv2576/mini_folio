@@ -410,7 +410,7 @@ export const skills = [
 export const about = {
   name: "Shivang Dixit",
   role: "Web & Mobile Dev",
-  proficient: ["Go", "TypeScript", "React", "PostgreSQL"],
+  proficient: ["Go", "TypeScript", "React", "React Native"],
   about:
     "Working across backend systems in Go, full-stack web development, and iOS app development to create smooth, reliable user experiences.",
   email: "dixitshiva12358@gmail.com",
