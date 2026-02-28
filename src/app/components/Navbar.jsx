@@ -63,7 +63,6 @@ export default function Navbar() {
     setIsMenuOpen(false);
   }, []);
 
-  // Handle escape key to close menu
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === "Escape" && isMenuOpen) {
@@ -75,7 +74,6 @@ export default function Navbar() {
     return () => document.removeEventListener("keydown", handleEscape);
   }, [isMenuOpen]);
 
-  // Memoized menu toggle handler
   const toggleMenu = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
   }, []);

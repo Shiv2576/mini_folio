@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         ></link>
       </head>
       <body className={`antialiased overflow-auto`}>
-        <div className="w-[100%] md:w-[700px] m-auto">
+        <div className="w-[100%] md:w-[750px] m-auto">
           <Navbar />
           {children}
           <Footer />
