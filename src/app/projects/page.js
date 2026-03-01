@@ -8,7 +8,7 @@ export default function Projects() {
   const allProjects = [...projects.pinProjects, ...projects.otherProjects];
 
   return (
-    <div className="md:w-[700px] w-[100%] mt-5 p-4">
+    <div className="md:w-[750px] w-[100%] mt-5 p-4">
       <main className="flex flex-col gap-4">
         <div className="flex flex-col gap-4">
           <button
@@ -44,7 +44,7 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 ">
           <div className="flex flex-col gap-2">
             <h2 className="text-lg font-medium text-[rgb(var(--text-main))]/80 border-b border-[rgb(var(--text-main))]/20 pb-2">
               Featured Projects ({projects.pinProjects.length})

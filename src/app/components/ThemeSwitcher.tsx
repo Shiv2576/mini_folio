@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
+"use client";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 type Theme =
   | "light"
@@ -21,48 +23,31 @@ const THEMES = [
   { id: "nord" as Theme, name: "Nord", primary: "#2e3440" },
 ];
 
-const ThemeSwitcher: React.FC = () => {
-  const [currentTheme, setCurrentTheme] = useState<Theme>("light");
-  const scrollRef = useRef<HTMLDivElement>(null);
+const ThemeSwitcher = () => {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") as Theme | null;
-    if (savedTheme && THEMES.some((t) => t.id === savedTheme)) {
-      setCurrentTheme(savedTheme);
-      document.documentElement.setAttribute("data-theme", savedTheme);
-    }
-  }, []);
-
-  const changeTheme = useCallback((themeId: Theme) => {
-    setCurrentTheme(themeId);
-    document.documentElement.setAttribute("data-theme", themeId);
-    localStorage.setItem("theme", themeId);
-  }, []);
+  useEffect(() => setMounted(true), []);
 
   return (
     <div className="relative max-w-full">
-      <div
-        ref={scrollRef}
-        className="flex items-center gap-1.5 p-1.5 rounded-xl bg-[rgb(var(--b1))] border border-[rgb(var(--bc))]/20 shadow-sm overflow-x-auto scrollbar-none"
-      >
-        {THEMES.map((theme) => (
+      <div className="flex items-center gap-1.5 p-1.5 rounded-xl bg-[rgb(var(--b1))] border border-[rgb(var(--bc))]/20 shadow-sm overflow-x-auto scrollbar-none">
+        {THEMES.map((t) => (
           <button
-            key={theme.id}
-            onClick={() => changeTheme(theme.id)}
-            className={`
-              flex-shrink-0 relative w-5 h-5 rounded-lg overflow-hidden transition-all duration-200
+            key={t.id}
+            onClick={() => setTheme(t.id)}
+            className={`flex-shrink-0 relative w-5 h-5 rounded-lg overflow-hidden transition-all duration-200
               ${
-                currentTheme === theme.id
+                mounted && theme === t.id
                   ? "ring-2 ring-[rgb(var(--bc))] scale-110 shadow-md"
                   : "ring-1 ring-[rgb(var(--bc))]/20 hover:ring-[rgb(var(--bc))]/60 hover:scale-105"
-              }
-            `}
-            style={{ backgroundColor: theme.primary }}
-            aria-label={theme.name}
-            title={theme.name}
+              }`}
+            style={{ backgroundColor: t.primary }}
+            aria-label={t.name}
+            title={t.name}
             type="button"
           >
-            {currentTheme === theme.id && (
+            {mounted && theme === t.id && (
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg
                   className="w-3 h-3 text-[rgb(var(--bc))]"
