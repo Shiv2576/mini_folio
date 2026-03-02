@@ -29,7 +29,54 @@ const ThemeSwitcher = () => {
   useEffect(() => setMounted(true), []);
 
   return (
-    <div className="relative max-w-full">
+    <div className="flex items-center gap-2">
+      {/* annotation from left */}
+      <div className="flex items-center gap-1 opacity-60 pointer-events-none shrink-0">
+        <span
+          className="text-[rgb(var(--bc))] leading-none rotate-[-8deg] inline-block"
+          style={{ fontSize: "12px", fontFamily: "cursive" }}
+        >
+          check this
+        </span>
+        <svg
+          width="36"
+          height="14"
+          viewBox="0 0 36 14"
+          fill="none"
+          className="text-[rgb(var(--bc))]"
+        >
+          {/* wavy dashed line */}
+          <path
+            d="M0 7 C3 3, 6 11, 9 7 C12 3, 15 11, 18 7 C21 3, 24 11, 27 7"
+            stroke="currentColor"
+            strokeWidth="1"
+            strokeLinecap="round"
+            fill="none"
+            strokeDasharray="1.5 1"
+          />
+          {/* arrowhead */}
+          <line
+            x1="27"
+            y1="7"
+            x2="22"
+            y2="4"
+            stroke="currentColor"
+            strokeWidth="1"
+            strokeLinecap="round"
+          />
+          <line
+            x1="27"
+            y1="7"
+            x2="22"
+            y2="10"
+            stroke="currentColor"
+            strokeWidth="1"
+            strokeLinecap="round"
+          />
+        </svg>
+      </div>
+
+      {/* switcher */}
       <div className="flex items-center gap-1.5 p-1.5 rounded-xl bg-[rgb(var(--b1))] border border-[rgb(var(--bc))]/20 shadow-sm overflow-x-auto scrollbar-none">
         {THEMES.map((t) => (
           <button
