@@ -6,27 +6,26 @@ type Theme =
   | "light"
   | "dark"
   | "sepia"
-  | "latte"
-  | "frappe"
-  | "macchiato"
   | "mocha"
-  | "nord";
+  | "nord"
+  | "rosepine"
+  | "everforest"
+  | "tokyonight";
 
 const THEMES = [
-  { id: "light" as Theme, name: "Light", primary: "#e8e2d0" },
+  { id: "light" as Theme, name: "Light", primary: "#fffaf0" },
   { id: "dark" as Theme, name: "Dark", primary: "#0d0d0d" },
   { id: "sepia" as Theme, name: "Sepia", primary: "#f1e7d0" },
-  { id: "latte" as Theme, name: "Latte", primary: "#eff1f5" },
-  { id: "frappe" as Theme, name: "Frappe", primary: "#303446" },
-  { id: "macchiato" as Theme, name: "Macchiato", primary: "#24273a" },
   { id: "mocha" as Theme, name: "Mocha", primary: "#1e1e2e" },
   { id: "nord" as Theme, name: "Nord", primary: "#2e3440" },
+  { id: "rosepine" as Theme, name: "Rose Pine", primary: "#191724" },
+  { id: "everforest" as Theme, name: "Everforest", primary: "#232620" },
+  { id: "tokyonight" as Theme, name: "Tokyo Night", primary: "#1a1b26" },
 ];
 
 const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-
   useEffect(() => setMounted(true), []);
 
   return (

@@ -1,411 +1,115 @@
-import {
-  SiJavascript,
-  SiTailwindcss,
-  SiReact,
-  SiNextdotjs,
-  SiSupabase,
-  SiNuxtdotjs,
-  SiGo,
-  SiExpo,
-  SiDocker,
-  SiBun,
-  SiSocketdotio,
-  SiMongodb,
-  SiApachekafka,
-  SiPostgresql,
-  SiNodedotjs,
-  SiGit,
-  SiSolidity,
-  SiTypescript,
-  SiPython,
-  SiJupyter,
-  SiClaude,
-  SiGin,
-  SiDrizzle,
-  SiVite,
-  SiLazyvim,
-  SiShadcnui,
-  SiGraphql,
-  SiNeovim,
-  SiSwift,
-  SiLua,
-  SiGithub,
-  SiRust,
-  SiRadixui,
-  SiMdx,
-  SiTypst,
-  SiEthereum,
-  SiTelegram,
-  SiBitcoin,
-  SiWeb3Dotjs,
-  SiVercel,
-  SiBlockchaindotcom,
-  SiReactquery,
-  SiSentry,
-} from "react-icons/si";
+// npm install @iconify/react
+import { Icon } from "@iconify/react";
+
+// ─── Icon helper ─────────────────────────────────────────────────────────────
+// size: 16 for skills, 14 for project tags
+const ic = (icon, size = 16) => (
+  <Icon
+    icon={icon}
+    width={size}
+    height={size}
+    className="text-[rgb(var(--bc))] transition-colors duration-200"
+  />
+);
+
+// ─── Iconify icon IDs ─────────────────────────────────────────────────────────
+const ICONS = {
+  javascript: "simple-icons:javascript",
+  tailwind: "simple-icons:tailwindcss",
+  react: "simple-icons:react",
+  nextjs: "simple-icons:nextdotjs",
+  supabase: "simple-icons:supabase",
+  sentry: "simple-icons:sentry",
+  nuxt: "simple-icons:nuxtdotjs",
+  go: "simple-icons:go",
+  expo: "simple-icons:expo",
+  docker: "simple-icons:docker",
+  bun: "simple-icons:bun",
+  socketio: "simple-icons:socketdotio",
+  mongodb: "simple-icons:mongodb",
+  kafka: "simple-icons:apachekafka",
+  postgresql: "simple-icons:postgresql",
+  nodejs: "simple-icons:nodedotjs",
+  git: "simple-icons:git",
+  solidity: "simple-icons:solidity",
+  typescript: "simple-icons:typescript",
+  python: "simple-icons:python",
+  jupyter: "simple-icons:jupyter",
+  claude: "simple-icons:claude",
+  gin: "simple-icons:gin",
+  drizzle: "simple-icons:drizzle",
+  vite: "simple-icons:vite",
+  lazyvim: "simple-icons:lazyvim",
+  shadcn: "simple-icons:shadcnui",
+  graphql: "simple-icons:graphql",
+  neovim: "simple-icons:neovim",
+  swift: "simple-icons:swift",
+  lua: "simple-icons:lua",
+  github: "simple-icons:github",
+  rust: "simple-icons:rust",
+  radixui: "simple-icons:radixui",
+  mdx: "simple-icons:mdx",
+  typst: "simple-icons:typst",
+  zustand: "ph:circles-three",
+  ethereum: "simple-icons:ethereum",
+  telegram: "simple-icons:telegram",
+  bitcoin: "simple-icons:bitcoin",
+  web3js: "simple-icons:web3dotjs",
+  vercel: "simple-icons:vercel",
+  blockchain: "simple-icons:blockchaindotcom",
+  reactquery: "simple-icons:reactquery",
+  eylsia: "simple-icons:eylsia",
+};
+
+// ─── Tag helper (project tags use size 14) ───────────────────────────────────
+const tag = (name, iconKey) => ({
+  name,
+  logo: ic(ICONS[iconKey], 14),
+});
+
+// ─── Skills ──────────────────────────────────────────────────────────────────
 
 export const skills = [
-  {
-    name: "JavaScript",
-    alt: "js logo",
-    icon: (
-      <SiJavascript
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Tailwind",
-    alt: "tailwind logo",
-    icon: (
-      <SiTailwindcss
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "React Js",
-    alt: "react logo",
-    icon: (
-      <SiReact
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Next Js",
-    alt: "nextjs logo",
-    icon: (
-      <SiNextdotjs
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Supabase",
-    alt: "supabase logo",
-    icon: (
-      <SiSupabase
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Sentry",
-    alt: "sentry logo",
-    icon: (
-      <SiSentry
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Nuxt",
-    alt: "nuxt logo",
-    icon: (
-      <SiNuxtdotjs
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Go",
-    alt: "go logo",
-    icon: (
-      <SiGo
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Expo",
-    alt: "Expo logo",
-    icon: (
-      <SiExpo
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Docker",
-    alt: "docker logo",
-    icon: (
-      <SiDocker
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "bun",
-    alt: "bun logo",
-    icon: (
-      <SiBun
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Socket.IO",
-    alt: "socket.io logo",
-    icon: (
-      <SiSocketdotio
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "MongoDB",
-    alt: "mongodb logo",
-    icon: (
-      <SiMongodb
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Apache Kafka",
-    alt: "apache kafka logo",
-    icon: (
-      <SiApachekafka
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "PostgreSQL",
-    alt: "postgresql logo",
-    icon: (
-      <SiPostgresql
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Node.js",
-    alt: "nodejs logo",
-    icon: (
-      <SiNodedotjs
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Git",
-    alt: "git logo",
-    icon: (
-      <SiGit
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Solidity",
-    alt: "solidity logo",
-    icon: (
-      <SiSolidity
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "TypeScript",
-    alt: "typescript logo",
-    icon: (
-      <SiTypescript
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Python",
-    alt: "Python logo",
-    icon: (
-      <SiPython
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Jupyter",
-    alt: "Jupyter logo",
-    icon: (
-      <SiJupyter
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Claude",
-    alt: "Claude logo",
-    icon: (
-      <SiClaude
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Gin",
-    alt: "Gin logo",
-    icon: (
-      <SiGin
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Drizzle",
-    alt: "Drizzle logo",
-    icon: (
-      <SiDrizzle
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Vite",
-    alt: "Vite logo",
-    icon: (
-      <SiVite
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "LazyVim",
-    alt: "LazyVim logo",
-    icon: (
-      <SiLazyvim
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Shadcn",
-    alt: "Shadcn logo",
-    icon: (
-      <SiShadcnui
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "GraphQL",
-    alt: "GraphQL logo",
-    icon: (
-      <SiGraphql
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Neovim",
-    alt: "Neovim logo",
-    icon: (
-      <SiNeovim
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Swift",
-    alt: "Swift logo",
-    icon: (
-      <SiSwift
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Lua",
-    alt: "Lua logo",
-    icon: (
-      <SiLua
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Github",
-    alt: "Github logo",
-    icon: (
-      <SiGithub
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Rust",
-    alt: "Rust logo",
-    icon: (
-      <SiRust
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Radix ui",
-    alt: "Radixui logo",
-    icon: (
-      <SiRadixui
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Mdx",
-    alt: "Mdx logo",
-    icon: (
-      <SiMdx
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
-  {
-    name: "Typst",
-    alt: "Typst logo",
-    icon: (
-      <SiTypst
-        size={16}
-        className="text-[rgb(var(--bc))] transition-colors duration-200"
-      />
-    ),
-  },
+  { name: "JavaScript", alt: "js logo", icon: ic(ICONS.javascript) },
+  { name: "Tailwind", alt: "tailwind logo", icon: ic(ICONS.tailwind) },
+  { name: "React Js", alt: "react logo", icon: ic(ICONS.react) },
+  { name: "Next Js", alt: "nextjs logo", icon: ic(ICONS.nextjs) },
+  { name: "Supabase", alt: "supabase logo", icon: ic(ICONS.supabase) },
+  { name: "Sentry", alt: "sentry logo", icon: ic(ICONS.sentry) },
+  { name: "Nuxt", alt: "nuxt logo", icon: ic(ICONS.nuxt) },
+  { name: "Go", alt: "go logo", icon: ic(ICONS.go) },
+  { name: "Expo", alt: "expo logo", icon: ic(ICONS.expo) },
+  { name: "Docker", alt: "docker logo", icon: ic(ICONS.docker) },
+  { name: "bun", alt: "bun logo", icon: ic(ICONS.bun) },
+  { name: "Socket.IO", alt: "socket.io logo", icon: ic(ICONS.socketio) },
+  { name: "MongoDB", alt: "mongodb logo", icon: ic(ICONS.mongodb) },
+  { name: "Apache Kafka", alt: "kafka logo", icon: ic(ICONS.kafka) },
+  { name: "PostgreSQL", alt: "postgresql logo", icon: ic(ICONS.postgresql) },
+  { name: "Node.js", alt: "nodejs logo", icon: ic(ICONS.nodejs) },
+  { name: "Git", alt: "git logo", icon: ic(ICONS.git) },
+  { name: "Solidity", alt: "solidity logo", icon: ic(ICONS.solidity) },
+  { name: "TypeScript", alt: "typescript logo", icon: ic(ICONS.typescript) },
+  { name: "Python", alt: "python logo", icon: ic(ICONS.python) },
+  { name: "Jupyter", alt: "jupyter logo", icon: ic(ICONS.jupyter) },
+  { name: "Claude", alt: "claude logo", icon: ic(ICONS.claude) },
+  { name: "Gin", alt: "gin logo", icon: ic(ICONS.gin) },
+  { name: "Drizzle", alt: "drizzle logo", icon: ic(ICONS.drizzle) },
+  { name: "Vite", alt: "vite logo", icon: ic(ICONS.vite) },
+  { name: "LazyVim", alt: "lazyvim logo", icon: ic(ICONS.lazyvim) },
+  { name: "Shadcn", alt: "shadcn logo", icon: ic(ICONS.shadcn) },
+  { name: "GraphQL", alt: "graphql logo", icon: ic(ICONS.graphql) },
+  { name: "Neovim", alt: "neovim logo", icon: ic(ICONS.neovim) },
+  { name: "Swift", alt: "swift logo", icon: ic(ICONS.swift) },
+  { name: "Lua", alt: "lua logo", icon: ic(ICONS.lua) },
+  { name: "Github", alt: "github logo", icon: ic(ICONS.github) },
+  { name: "Rust", alt: "rust logo", icon: ic(ICONS.rust) },
+  { name: "Radix UI", alt: "radixui logo", icon: ic(ICONS.radixui) },
+  { name: "MDX", alt: "mdx logo", icon: ic(ICONS.mdx) },
+  { name: "Typst", alt: "typst logo", icon: ic(ICONS.typst) },
+  { name: "Zustand", alt: "zustand logo", icon: ic(ICONS.zustand) },
 ];
+
+// ─── About ───────────────────────────────────────────────────────────────────
 
 export const about = {
   name: "Shivang Dixit",
@@ -416,6 +120,8 @@ export const about = {
   email: "dixitshiva12358@gmail.com",
 };
 
+// ─── SEO ─────────────────────────────────────────────────────────────────────
+
 export const seo = {
   title: `${about.name} | ${about.role}`,
   description:
@@ -424,9 +130,13 @@ export const seo = {
     "portfolio, web developer, Next.js, developer portfolio, minimal portfolio",
 };
 
+// ─── Forms ───────────────────────────────────────────────────────────────────
+
 export const forms = {
   formspreeUrl: "https://formspree.io/f/<url>",
 };
+
+// ─── Socials ─────────────────────────────────────────────────────────────────
 
 export const socials = {
   github: "https://github.com/Shiv2576",
@@ -436,6 +146,8 @@ export const socials = {
     "https://drive.google.com/file/d/1ie08zhFwNcF76NsRTqWJT_tlOlwyOTZc/view?usp=drive_link",
 };
 
+// ─── Projects ────────────────────────────────────────────────────────────────
+
 export const projects = {
   pinProjects: [
     {
@@ -443,183 +155,47 @@ export const projects = {
       description:
         "A modern React Native mobile application that delivers the best of Hacker News in a clean, fast, and user-friendly interface, not just a reader, but a complete participation platform.",
       tags: [
-        {
-          name: "Expo",
-          logo: (
-            <SiExpo
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "TypeScript",
-          logo: (
-            <SiTypescript
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "React Query",
-          logo: (
-            <SiReactquery
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "React Native",
-          logo: (
-            <SiReact
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
+        tag("Expo", "expo"),
+        tag("TypeScript", "typescript"),
+        tag("React Query", "reactquery"),
+        tag("React Native", "react"),
       ],
       link: "https://hn-web-five.vercel.app/",
     },
     {
       title: "Weave App",
       description:
-        "A clean, offline-first app that converts JPEGs to PDFs right in your mobile. No servers, no uploads—just seamless file conversion with local storage and easy sharing. Built this to really understand app versioning and project architecture.",
+        "A clean, offline-first app that converts JPEGs to PDFs right in your mobile. No servers, no uploads—just seamless file conversion with local storage and easy sharing.",
       tags: [
-        {
-          name: "React Native",
-          logo: (
-            <SiReact
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Expo",
-          logo: (
-            <SiExpo
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "TypeScript",
-          logo: (
-            <SiTypescript
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
+        tag("React Native", "react"),
+        tag("Expo", "expo"),
+        tag("TypeScript", "typescript"),
       ],
       link: "https://weavemobile.netlify.app/",
     },
     {
       title: "Unistream",
       description:
-        "Real-time streaming service for Uniswap V3 liquidity data. Visualizes TWAP/SPOT prices with an interactive order book and slippage calculator. Choose your timeframe from 15 minutes to 2 hours and watch the market move.",
+        "Real-time streaming service for Uniswap V3 liquidity data. Visualizes TWAP/SPOT prices with an interactive order book and slippage calculator.",
       tags: [
-        {
-          name: "React",
-          logo: (
-            <SiReact
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Next.js",
-          logo: (
-            <SiNextdotjs
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Go",
-          logo: (
-            <SiGo
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Docker",
-          logo: (
-            <SiDocker
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Shadcnui",
-          logo: (
-            <SiShadcnui
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
+        tag("React", "react"),
+        tag("Next.js", "nextjs"),
+        tag("Go", "go"),
+        tag("Docker", "docker"),
+        tag("Shadcn", "shadcn"),
       ],
       link: "https://unistream2.netlify.app/",
     },
     {
       title: "Disperz Web3",
       description:
-        "Batch send multiple tokens to different wallets on Sepolia testnet in one go. Clean interface, personal vaults, and no more tedious one-by-one transfers. Smart contract tested and ready.",
+        "Batch send multiple tokens to different wallets on Sepolia testnet in one go. Clean interface, personal vaults, and no more tedious one-by-one transfers.",
       tags: [
-        {
-          name: "Next.js",
-          logo: (
-            <SiNextdotjs
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Solidity",
-          logo: (
-            <SiSolidity
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Shadcnui",
-          logo: (
-            <SiShadcnui
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Docker",
-          logo: (
-            <SiDocker
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Ethereum",
-          logo: (
-            <SiEthereum
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
+        tag("Next.js", "nextjs"),
+        tag("Solidity", "solidity"),
+        tag("Shadcn", "shadcn"),
+        tag("Docker", "docker"),
+        tag("Ethereum", "ethereum"),
       ],
       link: "https://disperz.netlify.app/",
     },
@@ -628,285 +204,84 @@ export const projects = {
     {
       title: "Market Reaction Signaling Bot Telegram",
       description:
-        "Telegram bot that watches the mempool like a hawk. Scrapes whale transactions and sends instant alerts when big players move. Never miss a signal again.",
+        "Telegram bot that watches the mempool like a hawk. Scrapes whale transactions and sends instant alerts when big players move.",
       tags: [
-        {
-          name: "Nuxt.js",
-          logo: (
-            <SiNuxtdotjs
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Telegram",
-          logo: (
-            <SiTelegram
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "TypeScript",
-          logo: (
-            <SiTypescript
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Bitcoin",
-          logo: (
-            <SiBitcoin
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
+        tag("Nuxt.js", "nuxt"),
+        tag("Telegram", "telegram"),
+        tag("TypeScript", "typescript"),
+        tag("Bitcoin", "bitcoin"),
       ],
       link: "https://mrt-nu.vercel.app/",
     },
     {
       title: "Go Absolute",
       description:
-        "A curated learning path for Go backend development. From 'hello world' to building systems that actually scale. Perfect for devs who want to get their hands dirty with real-world Go.",
-      tags: [
-        {
-          name: "Nuxt.js",
-          logo: (
-            <SiNuxtdotjs
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Go",
-          logo: (
-            <SiGo
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Git",
-          logo: (
-            <SiGit
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-      ],
+        "A curated learning path for Go backend development. From 'hello world' to building systems that actually scale.",
+      tags: [tag("Nuxt.js", "nuxt"), tag("Go", "go"), tag("Git", "git")],
       link: "https://goabsolute.netlify.app/",
     },
     {
       title: "Kafka Eventstreaming",
       description:
         "Building event-driven systems with Go and Kafka. Because sometimes you need your services to actually talk to each other.",
-      tags: [
-        {
-          name: "Go",
-          logo: (
-            <SiGo
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Docker",
-          logo: (
-            <SiDocker
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Git",
-          logo: (
-            <SiGit
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-      ],
+      tags: [tag("Go", "go"), tag("Docker", "docker"), tag("Git", "git")],
       link: "https://github.com/Shiv2576/Go-Kafka-Learning-Documentation-Roadmap",
     },
     {
       title: "Solidity Contract",
       description:
-        "The brains behind Disperz—smart contracts built in Solidity and battle-tested with Foundry. Because DeFi should just work.",
+        "The brains behind Disperz—smart contracts built in Solidity and battle-tested with Foundry.",
       tags: [
-        {
-          name: "Solidity",
-          logo: (
-            <SiSolidity
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Web3.js",
-          logo: (
-            <SiWeb3Dotjs
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Ethereum",
-          logo: (
-            <SiEthereum
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
+        tag("Solidity", "solidity"),
+        tag("Web3.js", "web3js"),
+        tag("Ethereum", "ethereum"),
       ],
       link: "https://github.com/Shiv2576/Disperz",
     },
     {
       title: "Svg Animation",
       description:
-        "Got bored, started playing with SVGs. Turns out you can make some pretty cool stuff with just code and creativity. No AI, just pure CSS/JS magic.",
+        "Got bored, started playing with SVGs. No AI, just pure CSS/JS magic.",
       tags: [
-        {
-          name: "React",
-          logo: (
-            <SiReact
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "TypeScript",
-          logo: (
-            <SiTypescript
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Vercel",
-          logo: (
-            <SiVercel
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
+        tag("React", "react"),
+        tag("TypeScript", "typescript"),
+        tag("Vercel", "vercel"),
       ],
       link: "https://logbook-delta-red.vercel.app/",
     },
     {
-      title: "Go websocket",
+      title: "Go Websocket",
       description:
-        "Real-time price oracle streaming both spot and TWAP prices for USDC/WETH on Uniswap. Because sometimes you need your data fresh, not 5 minutes old.",
+        "Real-time price oracle streaming both spot and TWAP prices for USDC/WETH on Uniswap.",
       tags: [
-        {
-          name: "Go",
-          logo: (
-            <SiGo
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Docker",
-          logo: (
-            <SiDocker
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Blockchain",
-          logo: (
-            <SiBlockchaindotcom
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
+        tag("Go", "go"),
+        tag("Docker", "docker"),
+        tag("Blockchain", "blockchain"),
       ],
       link: "https://github.com/Shiv2576/Twap_Oracle-Uniswap-",
     },
     {
       title: "Minimalist Portfolio Template",
       description:
-        "A no-fuss portfolio template for devs who believe less is more. Built with React, Tailwind—fork it and make it yours in minutes.",
+        "A no-fuss portfolio template for devs who believe less is more. Fork it and make it yours in minutes.",
       tags: [
-        {
-          name: "Javascript",
-          logo: (
-            <SiJavascript
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "React",
-          logo: (
-            <SiReact
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Tailwind",
-          logo: (
-            <SiTailwindcss
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
+        tag("JavaScript", "javascript"),
+        tag("React", "react"),
+        tag("Tailwind", "tailwind"),
       ],
       link: "https://github.com/Shiv2576/mini_folio",
     },
     {
       title: "Swift Practice",
       description:
-        "My journey into iOS development—one small project and coding challenge at a time. Learning Swift by actually building stuff.",
-      tags: [
-        {
-          name: "Swift",
-          logo: (
-            <SiSwift
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-        {
-          name: "Git",
-          logo: (
-            <SiGit
-              size={14}
-              className="text-[rgb(var(--bc))] transition-colors duration-200"
-            />
-          ),
-        },
-      ],
+        "My journey into iOS development—one small project and coding challenge at a time.",
+      tags: [tag("Swift", "swift"), tag("Git", "git")],
       link: "https://github.com/Shiv2576/swift_practice",
     },
   ],
 };
+
+// ─── Experience ───────────────────────────────────────────────────────────────
 
 export const experience = [
   {
@@ -918,7 +293,7 @@ export const experience = [
   {
     title: "University Mobile App Feature Development",
     description:
-      "Developed a responsive file upload feature for the university’s official mobile app using React Native, supporting multiple file formats.",
+      "Developed a responsive file upload feature for the university's official mobile app using React Native, supporting multiple file formats.",
     date: "01/11/2025",
   },
   {
@@ -934,6 +309,8 @@ export const experience = [
     date: "01/07/2024",
   },
 ];
+
+// ─── Blogs ───────────────────────────────────────────────────────────────────
 
 export const blogs = [
   {

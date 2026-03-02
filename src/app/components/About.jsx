@@ -8,7 +8,7 @@ export default function About() {
           About
         </h2>
         <div className="flex gap-2 flex-col">
-          <p className="text-base text-base-content/80">
+          <p className="text-base" style={{ color: "var(--text-main)" }}>
             I am <strong className="font-bold">proficient</strong> in{" "}
             <span className="inline-flex items-center gap-1 font-semibold">
               {about.proficient.map((Component, index) => (
@@ -20,12 +20,15 @@ export default function About() {
               ))}
             </span>
           </p>
-          <p className="text-base text-base-content/80">{about.about}</p>
-          <p className="text-base text-base-content/80">
+          <p className="text-base" style={{ color: "var(--text-main)" }}>
+            {about.about}
+          </p>
+          <p className="text-base" style={{ color: "var(--text-main)" }}>
             If you've got any questions or just feel like chatting, send me an{" "}
             <a
               href={`mailto:${about.email}`}
               className="font-bold hover:underline cursor-pointer"
+              style={{ color: "var(--text-main)" }}
             >
               (Email)
             </a>{" "}
