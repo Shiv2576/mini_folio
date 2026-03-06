@@ -285,27 +285,27 @@ export const projects = {
 
 export const experience = [
   {
-    title: "Weave – Offline Image to PDF App",
+    title: "HackerNews Mobile App",
     description:
-      "Developing an ad-free offline image-to-PDF mobile application using Expo and React Native, focused on privacy and in-app storage.",
+      "Developed an Android application for browsing Hacker News feeds including Top, Ask, and Show posts. Implemented article reading, threaded comments, and optimized feed rendering using FlashList. Currently adding user authentication and account features.",
     date: "Current",
   },
   {
-    title: "University Mobile App Feature Development",
+    title: "University Mobile App – Feature Development",
     description:
-      "Developed a responsive file upload feature for the university's official mobile app using React Native, supporting multiple file formats.",
+      "Implemented a responsive file upload feature for the university’s official mobile application using React Native and Redux, supporting multiple file formats with efficient state management.",
     date: "01/11/2025",
   },
   {
-    title: "TON Mini App Builder",
+    title: "TON Telegram Mini App Development",
     description:
-      "Built Telegram Mini Apps using the Telegram WebApp SDK and integrated them with the TON blockchain for on-chain interactions.",
+      "Built Telegram Mini Apps using the Telegram WebApp SDK and integrated them with the TON blockchain to enable on-chain interactions and lightweight blockchain games for user engagement.",
     date: "",
   },
   {
     title: "Chainlink Oracle Integrations",
     description:
-      "Developed and deployed automated Solidity smart contracts using Chainlink log triggers and VRF on Ethereum.",
+      "Developed and deployed Solidity smart contracts integrated with Chainlink VRF for verifiable randomness and Log Triggers for automated contract execution. Implemented Chainlink Data Feeds for reliable off-chain data access.",
     date: "01/07/2024",
   },
 ];
