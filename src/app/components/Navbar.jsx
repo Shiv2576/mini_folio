@@ -85,8 +85,8 @@ export default function Navbar() {
       <div className="w-[97%] sm:w-full flex items-center justify-between bg-gray-10/50 backdrop-blur-sm py-5 px-4 sm:px-12 relative mx-[-20px] gap-2 sm:gap-6">
         {/* Decorative borders */}
         <div className="absolute -bottom-px -left-[100px] -right-[100px] border-t-[1.5px] border-dashed border-[rgb(var(--bc))]" />
-        <div className="absolute -left-px -top-[25px] -bottom-[790px] border-l-[1.5px] border-dashed border-[rgb(var(--bc))]" />
-        <div className="absolute -right-px -top-[25px] -bottom-[790px] border-r-[1.5px] border-dashed border-[rgb(var(--bc))]" />
+        <div className="absolute -left-px -top-[25px] -bottom-[890px] border-l-[1.5px] border-dashed border-[rgb(var(--bc))]" />
+        <div className="absolute -right-px -top-[25px] -bottom-[890px] border-r-[1.5px] border-dashed border-[rgb(var(--bc))]" />
 
         {/* Mobile menu button with animation */}
         <button

@@ -66,12 +66,8 @@ export default function Profile() {
 
       {/* ========== MODIFIED: Time Zone Section - MOVED UP ========== */}
       {/* Time Zone Display - Positioned right after profile image */}
-      <div className="w-full -mt-25 mb-1">
-        {" "}
-        {/* Reduced margin and added container */}
+      <div className="w-full -mt-25 sm:-mt-25 mb-1 scale-90 sm:scale-100 origin-top-right">
         <div className="ml-auto flex flex-col items-end gap-2">
-          {" "}
-          {/* Stacked layout */}
           <ThemeSwitcher />
           {/* GMT Display */}
           <div className="flex items-center gap-1.5 px-3 py-1 bg-manga-dark/5 dark:bg-manga-light/10 rounded-md border border-manga-dark/20 dark:border-manga-light/20">
