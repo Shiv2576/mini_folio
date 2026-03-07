@@ -143,7 +143,7 @@ export const socials = {
   twitter: "https://x.com/Shiv_dixit2576",
   Linkedin: "https://www.linkedin.com/in/shivangdixit2576/",
   Resume:
-    "https://drive.google.com/file/d/1ie08zhFwNcF76NsRTqWJT_tlOlwyOTZc/view?usp=drive_link",
+    "https://drive.google.com/file/d/1SXTf-DoPxkjNIzSfd4PbFMqVoa0rZxzc/view?usp=sharing",
 };
 
 // ─── Projects ────────────────────────────────────────────────────────────────
